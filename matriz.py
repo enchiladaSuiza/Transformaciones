@@ -77,9 +77,6 @@ class Matriz:
         print()
     
 class Transformador:
-    def __init__(self):
-        pass
-
     def trasladar(self, px, py, tx, ty):
         p = Matriz(1, 3)
         p.matriz = [[px, py, 1]]
