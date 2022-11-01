@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="es">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>Traslación | Graficación en Python: Conceptos y Transformaciones </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta name="author" content="Santiago Vergara" />
+<link rel="license" type="text/html" href="http://creativecommons.org/licenses/by-sa/4.0/" />
+<meta name="generator" content="eXeLearning 2.7 - exelearning.net" />
+<!--[if lt IE 9]><script type="text/javascript" src="exe_html5.js"></script><![endif]-->
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+	</head>
+<body class="exe-web-site" id="exe-node-7"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<header id="header"  style="background-image: url(geometry4.png); background-repeat: repeat-x;"><div id="headerContent">Graficación en Python: Conceptos y Transformaciones</div></header>
+<nav id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">Graficación</a></li>
+   <li><a href="objetivo.html" class="no-ch">Objetivo</a></li>
+   <li><a href="introduccin.html" class="no-ch">Introducción</a></li>
+   <li class="current-page-parent"><a href="desarrollo.html" class="current-page-parent daddy">Desarrollo</a>
+   <ul>
+      <li><a href="transformaciones.html" class="no-ch">Transformaciones</a></li>
+      <li><a href="representacin.html" class="no-ch">Representación</a></li>
+      <li id="active"><a href="traslacin.html" class="active no-ch">Traslación</a></li>
+      <li><a href="rotacin.html" class="no-ch">Rotación</a></li>
+      <li><a href="escalamiento.html" class="no-ch">Escalamiento</a></li>
+      <li><a href="otras_transformaciones.html" class="no-ch">Otras transformaciones</a></li>
+   </ul>
+   </li>
+   <li><a href="ejemplos.html" class="daddy">Ejemplos</a>
+   <ul class="other-section">
+      <li><a href="traslacin0.html" class="no-ch">Traslación</a></li>
+      <li><a href="rotacin0.html" class="no-ch">Rotación</a></li>
+      <li><a href="escalamiento0.html" class="no-ch">Escalamiento</a></li>
+   </ul>
+   </li>
+   <li><a href="ejercicios.html" class="daddy">Ejercicios</a>
+   <ul class="other-section">
+      <li><a href="traslacin1.html" class="no-ch">Traslación</a></li>
+      <li><a href="rotacin1.html" class="no-ch">Rotación</a></li>
+      <li><a href="escalamiento1.html" class="no-ch">Escalamiento</a></li>
+   </ul>
+   </li>
+   <li><a href="programacin_en_python.html" class="daddy">Programación en Python</a>
+   <ul class="other-section">
+      <li><a href="configuracin.html" class="no-ch">Configuración</a></li>
+      <li><a href="modelo.html" class="no-ch">Modelo</a></li>
+      <li><a href="vista_y_controlador.html" class="no-ch">Vista y Controlador</a></li>
+      <li><a href="uso_del_programa.html" class="no-ch">Uso del programa</a></li>
+   </ul>
+   </li>
+   <li><a href="evaluacin.html" class="no-ch">Evaluación</a></li>
+   <li><a href="glosario.html" class="no-ch">Glosario</a></li>
+   <li><a href="referencias.html" class="no-ch">Referencias</a></li>
+   <li><a href="crditos.html" class="no-ch">Créditos</a></li>
+</ul>
+</nav>
+<div id='topPagination'>
+<nav class="pagination noprt">
+<a href="representacin.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="rotacin.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+<div id="main-wrapper">
+<section id="main">
+<header id="nodeDecoration"><h1 id="nodeTitle">Traslación</h1></header>
+<article class="iDevice_wrapper textIdevice em_iDevice em_iDevice_geography" id="id12">
+<div class="iDevice emphasis1" >
+<header class="iDevice_header" style="background-image:url(icon_geography.png)"><h1 class="iDeviceTitle">Traslación</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta12_115_2" class="block iDevice_content">
+<div class="exe-text"><p style="text-align: justify;">Las traslaciones pueden entenderse como movimientos directos sin cambios de orientación, es decir, mantienen la forma y el tamaño de las figuras u objetos trasladados, a las cuales deslizan según el vector.</p>
+<p style="text-align: center;"><img src="traslacion-ejemplo.png" alt="Ejemplo de traslación de una figura" title="Ejemplo Traslación" width="428" height="245" /></p>
+<p style="text-align: justify;">Las traslación 2D implica el desplazamiento de un polígono donde cada punto <span style="font-family: book antiqua, palatino, serif;">P = (x, y)</span>, es trasladado <span style="font-family: book antiqua, palatino, serif;">t<sub>x</sub></span> unidades en el eje x <span style="font-family: book antiqua, palatino, serif;"></span> y <span style="font-family: book antiqua, palatino, serif;">t<sub>y</sub></span> unidades en el eje y, de esta forma, las coordenadas del nuevo punto <span style="font-family: book antiqua, palatino, serif;">P’ = (x’, y’)</span> se obtienen como:</p>
+<div class="exe-math code-only exe-math-engine position-center">
+<p class="exe-math-code">\begin{equation} \begin{split} x' = x + t_x \\ y' = y + t_y \end{split} \end{equation}</p>
+</div>
+<p style="text-align: center;"><img src="traslacion-punto.svg" alt="Digrama de traslación de un punto" title="Traslación Punto" width="276" height="268" /></p>
+<p style="text-align: justify;">Sea <span style="font-family: book antiqua, palatino, serif;">t = (t<sub>x</sub>, t<sub>y</sub>)</span> el vector de distancias y <span style="font-family: book antiqua, palatino, serif;">T</span> la matriz de traslación, en coordenadas homogéneas la traslación de un punto <span style="font-family: book antiqua, palatino, serif;">P</span> en 2D se puede expresar como el producto matricial <span style="font-family: book antiqua, palatino, serif;">P’ = PT</span>, es decir:</p>
+<div class="exe-math code-only exe-math-engine position-center">
+<p class="exe-math-code">\begin{equation} \begin{bmatrix} x' &amp; y' &amp; 1 \end{bmatrix} = \begin{bmatrix} x &amp; y &amp; 1 \end{bmatrix} \, \begin{bmatrix} 1 &amp; 0 &amp; 0 \\ 0 &amp; 1 &amp; 0 \\ t_x &amp; t_y &amp; 1 \end{bmatrix} \end{equation}</p>
+</div>
+<p style="text-align: justify;"><br /><br /></p></div>
+</div>
+</div>
+</div>
+</div>
+</article>
+<div id="packageLicense" class="cc cc-by-sa">
+<p><span>Obra publicada con</span> <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Licencia Creative Commons Reconocimiento Compartir igual 4.0</a></p>
+</div>
+</section>
+</div>
+<div id='bottomPagination'>
+<nav class="pagination noprt">
+<a href="representacin.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="rotacin.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+</div>
+<script type="text/javascript" src="_cedec_js.js"></script></body></html>

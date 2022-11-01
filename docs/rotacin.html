@@ -1,0 +1,183 @@
+<!doctype html>
+<html lang="es">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>Rotación | Graficación en Python: Conceptos y Transformaciones </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta name="author" content="Santiago Vergara" />
+<link rel="license" type="text/html" href="http://creativecommons.org/licenses/by-sa/4.0/" />
+<meta name="generator" content="eXeLearning 2.7 - exelearning.net" />
+<!--[if lt IE 9]><script type="text/javascript" src="exe_html5.js"></script><![endif]-->
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+	</head>
+<body class="exe-web-site" id="exe-node-8"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<header id="header"  style="background-image: url(geometry4.png); background-repeat: repeat-x;"><div id="headerContent">Graficación en Python: Conceptos y Transformaciones</div></header>
+<nav id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">Graficación</a></li>
+   <li><a href="objetivo.html" class="no-ch">Objetivo</a></li>
+   <li><a href="introduccin.html" class="no-ch">Introducción</a></li>
+   <li class="current-page-parent"><a href="desarrollo.html" class="current-page-parent daddy">Desarrollo</a>
+   <ul>
+      <li><a href="transformaciones.html" class="no-ch">Transformaciones</a></li>
+      <li><a href="representacin.html" class="no-ch">Representación</a></li>
+      <li><a href="traslacin.html" class="no-ch">Traslación</a></li>
+      <li id="active"><a href="rotacin.html" class="active no-ch">Rotación</a></li>
+      <li><a href="escalamiento.html" class="no-ch">Escalamiento</a></li>
+      <li><a href="otras_transformaciones.html" class="no-ch">Otras transformaciones</a></li>
+   </ul>
+   </li>
+   <li><a href="ejemplos.html" class="daddy">Ejemplos</a>
+   <ul class="other-section">
+      <li><a href="traslacin0.html" class="no-ch">Traslación</a></li>
+      <li><a href="rotacin0.html" class="no-ch">Rotación</a></li>
+      <li><a href="escalamiento0.html" class="no-ch">Escalamiento</a></li>
+   </ul>
+   </li>
+   <li><a href="ejercicios.html" class="daddy">Ejercicios</a>
+   <ul class="other-section">
+      <li><a href="traslacin1.html" class="no-ch">Traslación</a></li>
+      <li><a href="rotacin1.html" class="no-ch">Rotación</a></li>
+      <li><a href="escalamiento1.html" class="no-ch">Escalamiento</a></li>
+   </ul>
+   </li>
+   <li><a href="programacin_en_python.html" class="daddy">Programación en Python</a>
+   <ul class="other-section">
+      <li><a href="configuracin.html" class="no-ch">Configuración</a></li>
+      <li><a href="modelo.html" class="no-ch">Modelo</a></li>
+      <li><a href="vista_y_controlador.html" class="no-ch">Vista y Controlador</a></li>
+      <li><a href="uso_del_programa.html" class="no-ch">Uso del programa</a></li>
+   </ul>
+   </li>
+   <li><a href="evaluacin.html" class="no-ch">Evaluación</a></li>
+   <li><a href="glosario.html" class="no-ch">Glosario</a></li>
+   <li><a href="referencias.html" class="no-ch">Referencias</a></li>
+   <li><a href="crditos.html" class="no-ch">Créditos</a></li>
+</ul>
+</nav>
+<div id='topPagination'>
+<nav class="pagination noprt">
+<a href="traslacin.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="escalamiento.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+<div id="main-wrapper">
+<section id="main">
+<header id="nodeDecoration"><h1 id="nodeTitle">Rotación</h1></header>
+<article class="iDevice_wrapper textIdevice em_iDevice em_iDevice_interactive" id="id13">
+<div class="iDevice emphasis1" >
+<header class="iDevice_header" style="background-image:url(icon_interactive.png)"><h1 class="iDeviceTitle">Rotación</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta13_116_2" class="block iDevice_content">
+<div class="exe-text"><p style="text-align: justify;">Una rotación es una transformación en la que se hace girar al objeto en torno a un punto fijo que se denomina centro de rotación. El objeto se puede rotar al ángulo que se desee. Las rotaciones pueden ser realizadas horarias (en el sentido de las agujas del reloj) u anti-horarias.</p>
+<p style="text-align: center;"><img src="rotacion-ejemplo.gif" alt="Ejemplo de rotación" title="Rotación ejemplo" width="350" height="330" /></p>
+<p style="text-align: justify;">En dos dimensiones, para llevar a cabo una rotación usando una matriz, el punto <span style="font-family: book antiqua, palatino, serif;">(x, y)</span> que se gira hacia la izquierda, se escribe como un vector columna y se multiplica por una matriz de rotación calculada a partir del ángulo <span style="font-family: book antiqua, palatino, serif;">θ.</span></p>
+<p style="text-align: justify;"></p></div>
+</div>
+</div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper textIdevice em_iDevice em_iDevice_arts" id="id15">
+<div class="iDevice emphasis1" >
+<header class="iDevice_header" style="background-image:url(icon_arts.png)"><h1 class="iDeviceTitle">Repaso de trigonometría</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta15_118_2" class="block iDevice_content">
+<div class="exe-text"><h1>Funciones trigonométricas</h1>
+<p style="text-align: center;"><img src="funciones-trigo.png" alt="Figura que muestra un triángulo rectángulo con sus catetos, hipotenusa y ángulo" title="Partes del triángulo rectángulo" width="273" height="273" /></p>
+<div class="exe-math code-only exe-math-engine position-center">
+<p class="exe-math-code">\begin{align} \sin(\alpha) = \frac{co}{h}, \quad \cos(\alpha) = \frac{ca}{h}, \quad \tan(\alpha) = \frac{co}{h} \end{align}</p>
+</div>
+<h1>Teorema de Pitágoras</h1>
+<p style="text-align: center;"><img src="teorema-de-pitagoras.jpg" alt="Diagrama de un triángulo rectángulo y el teorema de pitágoras" title="Teorema de Pitágoras" width="299" height="265" /></p>
+<div class="exe-math code-only exe-math-engine position-center">
+<p class="exe-math-code">\begin{equation} h^2 = ca^2 + co^2 \end{equation}</p>
+</div>
+<p><br /><br /></p></div>
+</div>
+</div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper textIdevice em_iDevice em_iDevice_collaborative" id="id14">
+<div class="iDevice emphasis1" >
+<header class="iDevice_header" style="background-image:url(icon_collaborative.png)"><h1 class="iDeviceTitle">Rotación respecto al origen</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta14_117_2" class="block iDevice_content">
+<div class="exe-text"><p style="text-align: justify;">La posición de un punto es rotada alrededor del origen de coordenadas.</p>
+<p style="text-align: center;"><img src="rotacion-punto.svg" alt="Ejemplo de rotación de un punto" title="Ejemplo Rotación" width="299" height="288" /></p>
+<p style="text-align: justify;">El punto <span style="font-family: book antiqua, palatino, serif;">P(x, y)</span> está localizado a un ángulo <span style="font-family: book antiqua, palatino, serif;">φ</span> del eje x y a una distancia <span style="font-family: book antiqua, palatino, serif;">r</span> del origen. Tras rotar el punto a un ángulo <span style="font-family: book antiqua, palatino, serif;">θ</span> se obtiene el punto <span style="font-family: book antiqua, palatino, serif;">P’(x’, y’)</span>.</p>
+<p style="text-align: justify;">Así tenemos que:</p>
+<div class="exe-math code-only exe-math-engine position-center">
+<p class="exe-math-code">\begin{equation} \begin{split} x = r\cos(\phi) \\ y = r\sin(\phi) \end{split} \end{equation}</p>
+</div>
+<div class="exe-math code-only exe-math-engine position-center">
+<p class="exe-math-code">\begin{equation} \begin{split} x' = r\cos(\phi + \theta) \\ y' = r\sin(\phi + \theta) \end{split} \end{equation}</p>
+</div>
+<p style="text-align: justify;">Mediante identidades trigonométricas podemos expandir las ecuaciones para obtener:</p>
+<div class="exe-math code-only exe-math-engine position-center">
+<p class="exe-math-code">\begin{equation} \begin{split} x' = r\cos(\phi)\cos(\theta) - r\sin(\phi)\sin(\theta) \\ y' = r\cos(\phi)\sin(\theta) + r\sin(\phi)\cos(\theta) \end{split} \end{equation}</p>
+</div>
+<p style="text-align: justify;">Y sustituyendo con las definiciones originales de <span style="font-family: book antiqua, palatino, serif;">x</span> y <span style="font-family: book antiqua, palatino, serif;">y</span> obtenemos:</p>
+<div class="exe-math code-only exe-math-engine position-center">
+<p class="exe-math-code">\begin{equation} \begin{split} x' = x\cos(\theta) - y\sin(\theta) \\ y' = x\sin(\theta) + y\cos(\theta) \end{split} \end{equation}</p>
+</div>
+<p style="text-align: justify;">Sea <span style="font-family: book antiqua, palatino, serif;">R(θ)</span> la matriz de rotación sobre el origen, en coordenadas homogéneas la rotación de un punto <span style="font-family: book antiqua, palatino, serif;">P</span> alrededor del origen en 2D se puede expresar como el producto matricial de <span style="font-family: book antiqua, palatino, serif;">P’ = P × R(θ)</span>.</p>
+<div class="exe-math code-only exe-math-engine position-center">
+<p class="exe-math-code">\begin{equation} \begin{bmatrix} x' &amp; y' &amp; 1 \end{bmatrix} = \begin{bmatrix} x &amp; y &amp; 1 \end{bmatrix} \begin{bmatrix} \cos(\theta) &amp; \sin(\theta) &amp; 0 \\ -\sin(\theta) &amp; \cos(\theta) &amp; 0 \\ 0 &amp; 0 &amp; 1 \end{bmatrix} \end{equation}</p>
+</div>
+<p style="text-align: justify;"></p></div>
+</div>
+</div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper textIdevice em_iDevice em_iDevice_competencies" id="id16">
+<div class="iDevice emphasis1" >
+<header class="iDevice_header" style="background-image:url(icon_competencies.png)"><h1 class="iDeviceTitle">Rotación general</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta16_114_2" class="block iDevice_content">
+<div class="exe-text"><p style="padding-left: 30px; text-align: justify;">Para rotar sobre un punto cualquiera <span style="font-family: book antiqua, palatino, serif;">C = x<sub>c</sub>, y<sub>c</sub></span>, no necesariamente el origen, tenemos las siguientes ecuaciones:</p>
+<p style="text-align: center;"><img src="rotacion-general-punto.svg" alt="Diagrama de la rotación general" title="Diagrama Rotación General" width="281" height="265" /></p>
+<div class="exe-math code-only exe-math-engine position-center">
+<p class="exe-math-code">\begin{equation} \begin{gathered} x' = x_c + (x - x_c)\cos(\theta) - (y - y_c)\sin(\theta) \\ y' = y_c + (x - x_c)\sin(\theta) + (y - y_c)\cos(\theta) \end{gathered} \end{equation}</p>
+</div>
+<p>Este problema se puede resolver fácilmente en tres pasos:</p>
+<ol>
+<li>Trasladar el punto <span style="font-family: book antiqua, palatino, serif;">C</span> al origen, con una matriz de traslación <span style="font-family: book antiqua, palatino, serif;">T(-C)</span>.</li>
+<li>Aplicar la rotación alrededor de un origen, con la matriz de rotación <span style="font-family: book antiqua, palatino, serif;">R(θ)</span>.</li>
+<li>Regresar el punto C a su posición original, con una matriz de traslación <span style="font-family: book antiqua, palatino, serif;">T(C).</span></li>
+</ol>
+<p>De esta forma, se consigue la rotación de un punto <span style="font-family: book antiqua, palatino, serif;">P</span> dado un ángulo <span style="font-family: book antiqua, palatino, serif;">θ</span>, alrededor de un punto arbitrario <span style="font-family: book antiqua, palatino, serif;">C = (x<sub>c</sub>, y<sub>c</sub>)</span>. En 2D se puede expresar como el producto matricial <span style="font-family: book antiqua, palatino, serif;">P’ = P × T(-C) × R(θ) × T(C)</span>, es decir:</p>
+<div class="exe-math code-only exe-math-engine position-center">
+<p class="exe-math-code">\begin{equation} \begin{bmatrix} x' &amp; y' &amp; 1 \end{bmatrix} = \begin{bmatrix} x &amp; y &amp; 1 \end{bmatrix} \begin{bmatrix} 1 &amp; 0 &amp; 0 \\ 0 &amp; 1 &amp; 0 \\ -c_x &amp; -c_y &amp; 1 \end{bmatrix} \begin{bmatrix} \cos(\theta) &amp; \sin(\theta) &amp; 0 \\ -\sin(\theta) &amp; \cos(\theta) &amp; 0 \\ 0 &amp; 0 &amp; 1 \end{bmatrix} \begin{bmatrix} 1 &amp; 0 &amp; 0 \\ 0 &amp; 1 &amp; 0 \\ c_x &amp; c_y &amp; 1 \end{bmatrix} \end{equation}</p>
+</div>
+<p></p></div>
+</div>
+</div>
+</div>
+</div>
+</article>
+<div id="packageLicense" class="cc cc-by-sa">
+<p><span>Obra publicada con</span> <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Licencia Creative Commons Reconocimiento Compartir igual 4.0</a></p>
+</div>
+</section>
+</div>
+<div id='bottomPagination'>
+<nav class="pagination noprt">
+<a href="traslacin.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="escalamiento.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+</div>
+<script type="text/javascript" src="_cedec_js.js"></script></body></html>

@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="es">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>Representación | Graficación en Python: Conceptos y Transformaciones </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta name="author" content="Santiago Vergara" />
+<link rel="license" type="text/html" href="http://creativecommons.org/licenses/by-sa/4.0/" />
+<meta name="generator" content="eXeLearning 2.7 - exelearning.net" />
+<!--[if lt IE 9]><script type="text/javascript" src="exe_html5.js"></script><![endif]-->
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+	</head>
+<body class="exe-web-site" id="exe-node-5"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<header id="header"  style="background-image: url(geometry4.png); background-repeat: repeat-x;"><div id="headerContent">Graficación en Python: Conceptos y Transformaciones</div></header>
+<nav id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">Graficación</a></li>
+   <li><a href="objetivo.html" class="no-ch">Objetivo</a></li>
+   <li><a href="introduccin.html" class="no-ch">Introducción</a></li>
+   <li class="current-page-parent"><a href="desarrollo.html" class="current-page-parent daddy">Desarrollo</a>
+   <ul>
+      <li><a href="transformaciones.html" class="no-ch">Transformaciones</a></li>
+      <li id="active"><a href="representacin.html" class="active no-ch">Representación</a></li>
+      <li><a href="traslacin.html" class="no-ch">Traslación</a></li>
+      <li><a href="rotacin.html" class="no-ch">Rotación</a></li>
+      <li><a href="escalamiento.html" class="no-ch">Escalamiento</a></li>
+      <li><a href="otras_transformaciones.html" class="no-ch">Otras transformaciones</a></li>
+   </ul>
+   </li>
+   <li><a href="ejemplos.html" class="daddy">Ejemplos</a>
+   <ul class="other-section">
+      <li><a href="traslacin0.html" class="no-ch">Traslación</a></li>
+      <li><a href="rotacin0.html" class="no-ch">Rotación</a></li>
+      <li><a href="escalamiento0.html" class="no-ch">Escalamiento</a></li>
+   </ul>
+   </li>
+   <li><a href="ejercicios.html" class="daddy">Ejercicios</a>
+   <ul class="other-section">
+      <li><a href="traslacin1.html" class="no-ch">Traslación</a></li>
+      <li><a href="rotacin1.html" class="no-ch">Rotación</a></li>
+      <li><a href="escalamiento1.html" class="no-ch">Escalamiento</a></li>
+   </ul>
+   </li>
+   <li><a href="programacin_en_python.html" class="daddy">Programación en Python</a>
+   <ul class="other-section">
+      <li><a href="configuracin.html" class="no-ch">Configuración</a></li>
+      <li><a href="modelo.html" class="no-ch">Modelo</a></li>
+      <li><a href="vista_y_controlador.html" class="no-ch">Vista y Controlador</a></li>
+      <li><a href="uso_del_programa.html" class="no-ch">Uso del programa</a></li>
+   </ul>
+   </li>
+   <li><a href="evaluacin.html" class="no-ch">Evaluación</a></li>
+   <li><a href="glosario.html" class="no-ch">Glosario</a></li>
+   <li><a href="referencias.html" class="no-ch">Referencias</a></li>
+   <li><a href="crditos.html" class="no-ch">Créditos</a></li>
+</ul>
+</nav>
+<div id='topPagination'>
+<nav class="pagination noprt">
+<a href="transformaciones.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="traslacin.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+<div id="main-wrapper">
+<section id="main">
+<header id="nodeDecoration"><h1 id="nodeTitle">Representación</h1></header>
+<article class="iDevice_wrapper textIdevice em_iDevice em_iDevice_draw" id="id9">
+<div class="iDevice emphasis1" >
+<header class="iDevice_header" style="background-image:url(icon_draw.png)"><h1 class="iDeviceTitle">Representación matricial</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta9_115_2" class="block iDevice_content">
+<div class="exe-text"><p style="text-align: justify;">Para describir y manipular las transformaciones de una manera formal, se hace uso de una notación matricial y de todas las propiedades algebráicas que brindan las matrices, ya que representan el espacio mediante números y operaciones.</p>
+<h1>Matriz</h1>
+<p style="text-align: justify;">Una matriz es un conjunto bidimensional de números. Una matriz se representa por medio de una letra mayúscula (<span style="font-family: book antiqua, palatino, serif;">A, B, …</span>) y sus elementos con la misma letra en minúscula (<span style="font-family: book antiqua, palatino, serif;">a, b, …</span>), con un doble subíndice donde el primero indica la fila y el segundo la columna a la que pertenece.</p>
+<div class="exe-math code-only exe-math-engine position-center">
+<p class="exe-math-code">\begin{equation} A = \begin{bmatrix} a_{11} &amp; a_{12} &amp; \cdots &amp; a_{1n} \\ a_{21} &amp; a_{22} &amp; \cdots &amp; a_{2n}\\ \vdots &amp; \vdots &amp; \ddots &amp; \vdots\\ a_{m1} &amp; a_{m2} &amp; \cdots &amp; a_{mn} \end{bmatrix} \end{equation}</p>
+</div>
+<p style="text-align: justify;">Los elementos individuales de una matriz <span style="font-family: book antiqua, palatino, serif;">m x n</span> se denotan a menudo <span style="font-family: book antiqua, palatino, serif;">a<sub>ij</sub></span>, donde el valor máximo de <span style="font-family: book antiqua, palatino, serif;">i</span> es <span style="font-family: book antiqua, palatino, serif;">m</span> y el valor máximo de <span style="font-family: book antiqua, palatino, serif;">j</span> es <span style="font-family: book antiqua, palatino, serif;">n</span>. Siempre que la matriz tenga el mismo número de filas y de columnas que otra matriz, estas se pueden sumar o restar elemento por elemento.</p>
+<p style="text-align: justify;">Las aplicaciones que realizan transformaciones intensivamente, muchas veces en cada fotograma o múltiples transformaciones a la vez, por lo que se debe formular de forma muy eficiente toda la secuencia de transformaciones.</p>
+<p style="text-align: justify;">En el área de la graficación por computadora, es común encontrar la representación de las ecuaciones de transformación por medio de matrices, y se pueden encontrar dos tipos de notaciones para representarlas.</p>
+<h1>Vectores renglón</h1>
+<p style="text-align: justify;">Una de ellas es representando las coordenadas de un punto <span style="font-family: book antiqua, palatino, serif;">p</span> como <em>vectores renglón.</em> En 2D, una matriz de transformación <span style="font-family: book antiqua, palatino, serif;">M</span> multiplica al punto por la derecha para obtener el nuevo punto <span style="font-family: book antiqua, palatino, serif;">p’</span>.</p>
+<div class="exe-math code-only exe-math-engine position-center">
+<p class="exe-math-code">\begin{equation} p = \begin{bmatrix} x, y \end{bmatrix} \end{equation}</p>
+</div>
+<div class="exe-math code-only exe-math-engine position-center">
+<p class="exe-math-code">\begin{equation} p' = \begin{bmatrix} x', y' \end{bmatrix} = Mp \end{equation}</p>
+</div>
+<h1>Vectores columna</h1>
+<p style="text-align: justify;">La segunda notación es representado a las coordenadas de un punto <span style="font-family: book antiqua, palatino, serif;">p</span> como <em>vectores columna</em>, en este caso una matriz de transformación <span style="font-family: book antiqua, palatino, serif;">M</span> multiplica al punto por la izquierda para obtener el nuevo punto <span style="font-family: book antiqua, palatino, serif;">p’</span>.</p>
+<div class="exe-math code-only exe-math-engine position-center">
+<p class="exe-math-code">\begin{equation} p = \begin{bmatrix} x \\ y \end{bmatrix} \end{equation}</p>
+</div>
+<div class="exe-math code-only exe-math-engine position-center">
+<p class="exe-math-code">\begin{equation} p' = \begin{bmatrix} x'\\ y' \end{bmatrix} = Mp \end{equation}</p>
+</div>
+<h1>Multiplicación de matrices por vectores</h1>
+<p style="text-align: justify;">Si <span style="font-family: book antiqua, palatino, serif;">A<sub>m x n</sub></span> y <span style="font-family: book antiqua, palatino, serif;">B<sub>n x 1</sub></span>, el producto <span style="font-family: book antiqua, palatino, serif;">AB</span> es e vector <span style="font-family: book antiqua, palatino, serif;">m x 1</span> cuyas columnas son <span style="font-family: book antiqua, palatino, serif;">ab<sub>1</sub>, …, ab<sub>n</sub></span> en la que <span style="font-family: book antiqua, palatino, serif;">b<sub>1</sub>, …, b<sub>n</sub></span> son columnas de <span style="font-family: book antiqua, palatino, serif;">B</span>. Por ejemplo:</p>
+<div class="exe-math code-only exe-math-engine position-center">
+<p class="exe-math-code">\begin{equation} A = \begin{bmatrix} a_{11} &amp; a_{12} \\ a_{21} &amp; a a_{22} \end{bmatrix}, \, B = \begin{bmatrix} b_1 \\ b_2 \end{bmatrix} \end{equation}</p>
+</div>
+<div class="exe-math code-only exe-math-engine position-center">
+<p class="exe-math-code">\begin{equation} AB = \begin{bmatrix} a_{11} &amp; a_{12} \\ a_{21} &amp; a a_{22} \end{bmatrix} \, \begin{bmatrix} b_1 \\ b_2 \end{bmatrix} = \begin{bmatrix} a_{11}b_1 + a_{12}b_2 \\ a_{21}b_1 + a_{22}b_2 \end{bmatrix} \end{equation}</p>
+</div>
+<p>Cuando multiplicamos una matriz por un vector, <strong>es necesario que el número de filas del vector coincida con el número de columnas de la matriz.</strong> Si no es así, la multiplicación no está definida.</p>
+<p style="text-align: center;"><img src="matrix_multiplication.gif" alt="Ejemplo visual de multiplicación de matrices" title="Multiplicación matricial" width="485" height="321" /></p>
+<p style="text-align: justify;">La multiplicación entre matrices sigue el mismo principio.</p>
+<p style="text-align: center;"><strong><img src="multiply_matrices.gif" alt="Ejemplo visual de una multiplicación de matrices 3x3" title="Multiplicación de matrices" width="676" height="239" /></strong></p>
+<p style="text-align: justify;"><strong>La multiplicación de matrices no es asociativa, es decir, el orden de los factores sí altera el producto. Para llevar a cabo la multiplicación consecutiva correctamente, las matrices deben multiplicarse de derecha a izquierda.</strong></p></div>
+</div>
+</div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper textIdevice em_iDevice em_iDevice_play" id="id10">
+<div class="iDevice emphasis1" >
+<header class="iDevice_header" style="background-image:url(icon_play.png)"><h1 class="iDeviceTitle">Coordenadas homogéneas</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta10_114_2" class="block iDevice_content">
+<div class="exe-text"><p style="text-align: justify;">No todas las transformaciones son aplicadas a un punto como una multiplicación de factores, por tal razón se utilizan las coordenadas homogéneas para la representación matricial, y de esta forma todas las transformaciones son tratadas como multiplicaciones.</p>
+<p style="text-align: justify;"><br />En coordenadas homogéneas, a cada punto 2D se le agrega una tercera coordenada. De esta forma, en lugar de representar puntos como <span style="font-family: book antiqua, palatino, serif;">p = (x, y)</span> son representados como una terna <span style="font-family: book antiqua, palatino, serif;">p = (x, y, ω)</span>. Se dice que un par de coordenadas homogéneas <span style="font-family: book antiqua, palatino, serif;">(x, y, ω)</span> y <span style="font-family: book antiqua, palatino, serif;">(x’, y’, ω’)</span> representan el mismo punto si una es múltiplo de la otra.</p>
+<p style="text-align: justify;"><br />Por ejemplo, la terna <span style="font-family: book antiqua, palatino, serif;">(4, -2, 6)</span> y <span style="font-family: book antiqua, palatino, serif;">(8, -4, 12)</span> representan el mismo punto 2D pero en diferentes coordenadas triples, esto significa que cada punto tiene un sin fin de representaciones en coordenadas homogéneas.</p>
+<p style="text-align: justify;"><br />Una elección conveniente es hacer el valor de <span style="font-family: book antiqua, palatino, serif;">ω = 1</span>, así cada posición 2D es representada con las coordenadas homogéneas <span style="font-family: book antiqua, palatino, serif;">(x, y, 1)</span>.</p></div>
+</div>
+</div>
+</div>
+</div>
+</article>
+<div id="packageLicense" class="cc cc-by-sa">
+<p><span>Obra publicada con</span> <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Licencia Creative Commons Reconocimiento Compartir igual 4.0</a></p>
+</div>
+</section>
+</div>
+<div id='bottomPagination'>
+<nav class="pagination noprt">
+<a href="transformaciones.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="traslacin.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+</div>
+<script type="text/javascript" src="_cedec_js.js"></script></body></html>

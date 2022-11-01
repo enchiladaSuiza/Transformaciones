@@ -1,0 +1,191 @@
+<!doctype html>
+<html lang="es">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>Vista y Controlador | Graficación en Python: Conceptos y Transformaciones </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta name="author" content="Santiago Vergara" />
+<link rel="license" type="text/html" href="http://creativecommons.org/licenses/by-sa/4.0/" />
+<meta name="generator" content="eXeLearning 2.7 - exelearning.net" />
+<!--[if lt IE 9]><script type="text/javascript" src="exe_html5.js"></script><![endif]-->
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+	</head>
+<body class="exe-web-site" id="exe-node-21"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<header id="header"  style="background-image: url(geometry4.png); background-repeat: repeat-x;"><div id="headerContent">Graficación en Python: Conceptos y Transformaciones</div></header>
+<nav id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">Graficación</a></li>
+   <li><a href="objetivo.html" class="no-ch">Objetivo</a></li>
+   <li><a href="introduccin.html" class="no-ch">Introducción</a></li>
+   <li><a href="desarrollo.html" class="daddy">Desarrollo</a>
+   <ul class="other-section">
+      <li><a href="transformaciones.html" class="no-ch">Transformaciones</a></li>
+      <li><a href="representacin.html" class="no-ch">Representación</a></li>
+      <li><a href="traslacin.html" class="no-ch">Traslación</a></li>
+      <li><a href="rotacin.html" class="no-ch">Rotación</a></li>
+      <li><a href="escalamiento.html" class="no-ch">Escalamiento</a></li>
+      <li><a href="otras_transformaciones.html" class="no-ch">Otras transformaciones</a></li>
+   </ul>
+   </li>
+   <li><a href="ejemplos.html" class="daddy">Ejemplos</a>
+   <ul class="other-section">
+      <li><a href="traslacin0.html" class="no-ch">Traslación</a></li>
+      <li><a href="rotacin0.html" class="no-ch">Rotación</a></li>
+      <li><a href="escalamiento0.html" class="no-ch">Escalamiento</a></li>
+   </ul>
+   </li>
+   <li><a href="ejercicios.html" class="daddy">Ejercicios</a>
+   <ul class="other-section">
+      <li><a href="traslacin1.html" class="no-ch">Traslación</a></li>
+      <li><a href="rotacin1.html" class="no-ch">Rotación</a></li>
+      <li><a href="escalamiento1.html" class="no-ch">Escalamiento</a></li>
+   </ul>
+   </li>
+   <li class="current-page-parent"><a href="programacin_en_python.html" class="current-page-parent daddy">Programación en Python</a>
+   <ul>
+      <li><a href="configuracin.html" class="no-ch">Configuración</a></li>
+      <li><a href="modelo.html" class="no-ch">Modelo</a></li>
+      <li id="active"><a href="vista_y_controlador.html" class="active no-ch">Vista y Controlador</a></li>
+      <li><a href="uso_del_programa.html" class="no-ch">Uso del programa</a></li>
+   </ul>
+   </li>
+   <li><a href="evaluacin.html" class="no-ch">Evaluación</a></li>
+   <li><a href="glosario.html" class="no-ch">Glosario</a></li>
+   <li><a href="referencias.html" class="no-ch">Referencias</a></li>
+   <li><a href="crditos.html" class="no-ch">Créditos</a></li>
+</ul>
+</nav>
+<div id='topPagination'>
+<nav class="pagination noprt">
+<a href="modelo.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="uso_del_programa.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+<div id="main-wrapper">
+<section id="main">
+<header id="nodeDecoration"><h1 id="nodeTitle">Vista y Controlador</h1></header>
+<article class="iDevice_wrapper textIdevice em_iDevice em_iDevice_activity" id="id40">
+<div class="iDevice emphasis1" >
+<header class="iDevice_header" style="background-image:url(icon_activity.png)"><h1 class="iDeviceTitle">Librerías</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta40_121_2" class="block iDevice_content">
+<div class="exe-text"><p style="text-align: justify;">La Vista se encarga de mostrar los elementos de la interfaz, tenerlos visibles para el Contorlador y recibir resultados de éste para mostrarlos. La Vista y el Controlador se generarán en otro archivo de código llamado <em>main.py</em>.</p>
+<p style="text-align: justify;">Será necesario declarar las siguientes importaciones.</p>
+<p style="text-align: justify;"><span style="font-family: andale mono, monospace;">import sys</span><br /><span style="font-family: andale mono, monospace;">from PyQt6.QtWidgets import (</span><br /><span style="font-family: andale mono, monospace;">    QApplication,</span><br /><span style="font-family: andale mono, monospace;">    QMainWindow,</span><br /><span style="font-family: andale mono, monospace;">    QWidget,</span><br /><span style="font-family: andale mono, monospace;">    QGraphicsView,</span><br /><span style="font-family: andale mono, monospace;">    QGraphicsScene,</span><br /><span style="font-family: andale mono, monospace;">    QGraphicsEllipseItem,</span><br /><span style="font-family: andale mono, monospace;">    QHBoxLayout,</span><br /><span style="font-family: andale mono, monospace;">    QVBoxLayout,</span><br /><span style="font-family: andale mono, monospace;">    QGridLayout,</span><br /><span style="font-family: andale mono, monospace;">    QLabel,</span><br /><span style="font-family: andale mono, monospace;">    QLineEdit,</span><br /><span style="font-family: andale mono, monospace;">    QPushButton,</span><br /><span style="font-family: andale mono, monospace;">)</span><br /><span style="font-family: andale mono, monospace;">from PyQt6.QtGui import (</span><br /><span style="font-family: andale mono, monospace;">    QPainter,</span><br /><span style="font-family: andale mono, monospace;">    QPen,</span><br /><span style="font-family: andale mono, monospace;">    QBrush,</span><br /><span style="font-family: andale mono, monospace;">    QColor,</span><br /><span style="font-family: andale mono, monospace;">    QColorConstants</span><br /><span style="font-family: andale mono, monospace;">)</span><br /><span style="font-family: andale mono, monospace;">from PyQt6.QtCore import (</span><br /><span style="font-family: andale mono, monospace;">    Qt,</span><br /><span style="font-family: andale mono, monospace;">    QPointF,</span><br /><span style="font-family: andale mono, monospace;">    QRectF,</span><br /><span style="font-family: andale mono, monospace;">)</span><br /><span style="font-family: andale mono, monospace;">from functools import partial</span><br /><span style="font-family: andale mono, monospace;">from matriz import Transformador</span></p>
+<p style="text-align: justify;"><span style="font-family: andale mono, monospace;">sys</span> contiene la funcionalidad de correr el programa en una ventana y de cerrarlo adecuadamente.</p>
+<p style="text-align: justify;">PyQt funciona a base de <em>widgets</em>: elementos de la interfaz como botones y campos de escritura. PyQt provee una gran variedad de éstos, pero en el programa solo se usan aquellos importados en la sentencia <span style="font-family: andale mono, monospace;">from</span> <span style="font-family: andale mono, monospace;">PyQt6.QWidgets import ( ... )</span>. PyQt también provee utilidades para dibujar gráficos libremente en pantalla, contenidos dentro de QtGui y QtCore.</p>
+<p style="text-align: justify;"><span style="font-family: andale mono, monospace;">functools</span> es una librería estándar de Python que proporciona utilidades para el manejo de funciones. En el proyecto utilizaremos la utilidad <span style="font-family: andale mono, monospace;">partial</span>.</p>
+<p style="text-align: justify;">El Controlador necesita tener una referencia al modelo, por lo cual se importa la clase Transformador que se encuentra dentro de matriz.py.</p></div>
+</div>
+</div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper textIdevice em_iDevice em_iDevice_piece" id="id41">
+<div class="iDevice emphasis1" >
+<header class="iDevice_header" style="background-image:url(icon_piece.png)"><h1 class="iDeviceTitle">La clase VentanaPrincipal</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta41_122_2" class="block iDevice_content">
+<div class="exe-text"><p style="text-align: justify;">El elemento pricipal de la interfaz de usuario en PyQt es un objeto de la clase QMainWindow. Crearemos una clase hija de ésta llamada VentanaPrincipal, que se encaragará de manejar toda la interfaz de usuario.</p>
+<p style="text-align: justify;"><span style="font-family: andale mono, monospace;">class VentanaPrincipal(QMainWindow):</span></p>
+<h1 style="text-align: justify;">Método __init__</h1>
+<p style="text-align: justify;">El método <span style="font-family: andale mono, monospace;">__init__</span> llevará una gran cantidad de código, pues es donde se inicializan todos los elementos de la interfaz. Sin embargo, no contiene ningun tipo de lógica complicada. Todo el código posterior está dentro de <span style="font-family: andale mono, monospace;">__init__</span>.</p>
+<p><span style="font-family: andale mono, monospace;">def __init__(self):</span><br /><span style="font-family: andale mono, monospace;">        super().__init__(parent=None)</span></p>
+<p>En PyQt, se lleva a cabo una estructura de árbol, donde el elemnto raíz es la ventana principal, y todos los objetos que se muestren en ella serán sus hijos o hijos lejanos, ya que un elemento puede ser padre de otro. Es por esto que el constructor tiene al padre por defecto asignado a None.</p>
+<h2 style="text-align: justify;">Propiedades de la ventana principal</h2>
+<p style="text-align: justify;"><span style="font-family: andale mono, monospace;">        self.setWindowTitle("Transformaciones")</span><br /><span style="font-family: andale mono, monospace;">        self.setGeometry(400, 200, 600, 400)</span><br /><span style="font-family: andale mono, monospace;">        self.hboxlayout = QHBoxLayout()</span><br /><span style="font-family: andale mono, monospace;">        self.centro = QWidget(self)</span><br /><span style="font-family: andale mono, monospace;">        self.centro.setLayout(self.hboxlayout)</span><br /><span style="font-family: andale mono, monospace;">        self.tf = Transformador()</span></p>
+<p style="text-align: justify;">Se declara el título y las dimensiones de la ventana principal. Se instancia un objeto genérico QWidget que servirá como el contenido central de la ventana, y se le asigna un QHBoxLayout. Este layout indica que los elementos hijos consecuentes se irán agrupando horizontalmente uno detrás de otro.</p>
+<h2 style="text-align: justify;">Canvas</h2>
+<p style="text-align: justify;"><span style="font-family: andale mono, monospace;">        self.canvas = QGraphicsView(self.centro)</span><br /><span style="font-family: andale mono, monospace;">        self.canvas.setMinimumWidth(150)</span><br /><span style="font-family: andale mono, monospace;">        self.canvas.setGeometry(0, 0, 550, 400)</span><br /><span style="font-family: andale mono, monospace;">        self.canvas_scene = QGraphicsScene()</span><br /><span style="font-family: andale mono, monospace;">        self.canvas.setScene(self.canvas_scene)</span></p>
+<p style="text-align: justify;">QGraphicsView es el elemento que permite dibujar gráficos no predeterminados, y representará nuestro plano cartesiano. QGraphicsView requiere de una escene QGraphicsScene la que provee los métodos de dibujado en sí.</p>
+<h2 style="text-align: justify;">Barra lateral</h2>
+<p style="text-align: justify;"><span style="font-family: andale mono, monospace;">        self.sidebar = QWidget(self.centro)</span><br /><span style="font-family: andale mono, monospace;">        self.sidebar.setFixedWidth(150)</span><br /><span style="font-family: andale mono, monospace;">        self.sidebarlayout = QVBoxLayout(self.sidebar)</span><br /><span style="font-family: andale mono, monospace;">        self.sidebar.setLayout(self.sidebarlayout)</span><br /><span style="font-family: andale mono, monospace;">        self.gridlayout = QGridLayout(self.sidebar)</span><br /><span style="font-family: andale mono, monospace;">        self.sidebarlayout.addLayout(self.gridlayout)</span></p>
+<p style="text-align: justify;">Usaremos una barra lateral al lado del canvas para ubicar a los demás elementos en un QGridLayout, que ubica a los elementos en una rejilla y permite especificar la casilla en donde se ubicará cada elemento.</p>
+<h2 style="text-align: justify;">El punto principal P</h2>
+<p style="text-align: justify;"><span style="font-family: andale mono, monospace;">        self.p_label = QLabel("P")</span><br /><span style="font-family: andale mono, monospace;">        self.px_edit = QLineEdit(self.sidebar)</span><br /><span style="font-family: andale mono, monospace;">        self.px_edit.setPlaceholderText("x")</span><br /><span style="font-family: andale mono, monospace;">        self.py_edit = QLineEdit(self.sidebar)</span><br /><span style="font-family: andale mono, monospace;">        self.py_edit.setPlaceholderText("y")</span><br /><span style="font-family: andale mono, monospace;">        self.p_boton = QPushButton("Dibujar", self.sidebar)</span><br /><span style="font-family: andale mono, monospace;">        self.p_boton.clicked.connect(self.dibujarP)</span></p>
+<p style="text-align: justify;">Estos son los elementos que se usarán para que el usuario pueda definir el punto P al que se le aplicarán las transformaciones. QLabel muestra una cadena de texto, QLineEdit es un campo para ingresar texto y QPushButton es un botón común y corriente. Al boton se le suscribe una función llamada dibujarP, que será llamada cada vez que este sea presionado. Más adelante se definirá este método.</p>
+<h2 style="text-align: justify;">El punto central C</h2>
+<p><span style="font-family: andale mono, monospace;">        self.c_label = QLabel("C")</span><br /><span style="font-family: andale mono, monospace;">        self.cx_edit = QLineEdit(self.sidebar)</span><br /><span style="font-family: andale mono, monospace;">        self.cx_edit.setPlaceholderText("x")</span><br /><span style="font-family: andale mono, monospace;">        self.cy_edit = QLineEdit(self.sidebar)</span><br /><span style="font-family: andale mono, monospace;">        self.cy_edit.setPlaceholderText("y")</span><br /><span style="font-family: andale mono, monospace;">        self.c_boton = QPushButton("Dibujar", self.sidebar)</span><br /><span style="font-family: andale mono, monospace;">        self.c_boton.clicked.connect(self.dibujarC)</span></p>
+<p>Al igual que con P, estos elementos permiten definir al punto de pivote C que se usa como referencia en la rotación y el escalamiento. Su botón está suscrito a un método diferente llamado dibujarC.</p>
+<h2>El vector de traslación T</h2>
+<p><span style="font-family: andale mono, monospace;">        self.t_label = QLabel("T")</span><br /><span style="font-family: andale mono, monospace;">        self.tx_edit = QLineEdit(self.sidebar)</span><br /><span style="font-family: andale mono, monospace;">        self.tx_edit.setPlaceholderText("x")</span><br /><span style="font-family: andale mono, monospace;">        self.ty_edit = QLineEdit(self.sidebar)</span><br /><span style="font-family: andale mono, monospace;">        self.ty_edit.setPlaceholderText("y")</span><br /><span style="font-family: andale mono, monospace;">        self.t_boton = QPushButton("Trasladar", self.sidebar)</span><br /><span style="font-family: andale mono, monospace;">        self.t_boton.clicked.connect(self.trasladar)</span></p>
+<p>Los elementos del vector de traslación son prácticamente los mismos que los de los puntos anteriores. El botón está suscrito a <span style="font-family: andale mono, monospace;">trasladar</span>.</p>
+<h2>El ángulo de rotación R</h2>
+<p><span style="font-family: andale mono, monospace;">        self.r_label = QLabel("R")</span><br /><span style="font-family: andale mono, monospace;">        self.r_edit = QLineEdit(self.sidebar)</span><br /><span style="font-family: andale mono, monospace;">        self.r_edit.setPlaceholderText("°")</span><br /><span style="font-family: andale mono, monospace;">        self.r_boton = QPushButton("Rotar", self.sidebar)</span><br /><span style="font-family: andale mono, monospace;">        self.r_boton.clicked.connect(self.rotar)</span></p>
+<p>La rotación únicamente necesita un campo de texto para indicar el ángulo en grados al que se desea rotar P. Su botón llama al método <span style="font-family: andale mono, monospace;">rotar</span>.</p>
+<h2>El vector de escalamiento S</h2>
+<p><span style="font-family: andale mono, monospace;">        self.s_label = QLabel("S")</span><br /><span style="font-family: andale mono, monospace;">        self.sx_edit = QLineEdit(self.sidebar)</span><br /><span style="font-family: andale mono, monospace;">        self.sx_edit.setPlaceholderText("x")</span><br /><span style="font-family: andale mono, monospace;">        self.sy_edit = QLineEdit(self.sidebar)</span><br /><span style="font-family: andale mono, monospace;">        self.sy_edit.setPlaceholderText("y")</span><br /><span style="font-family: andale mono, monospace;">        self.s_boton = QPushButton("Escalar", self.sidebar)</span><br /><span style="font-family: andale mono, monospace;">        self.s_boton.clicked.connect(self.escalar)</span></p>
+<p>Estos elementos siguen el mismo patrón que la traslación. Su método es <span style="font-family: andale mono, monospace;">escalar</span>.</p>
+<h2>El punto resultante P'</h2>
+<p><span style="font-family: andale mono, monospace;">        self.p_prima_label = QLabel("P'")</span><br /><span style="font-family: andale mono, monospace;">        self.p_primax_edit = QLineEdit(self.sidebar)</span><br /><span style="font-family: andale mono, monospace;">        self.p_primax_edit.setPlaceholderText("x")</span><br /><span style="font-family: andale mono, monospace;">        self.p_primay_edit = QLineEdit(self.sidebar)</span><br /><span style="font-family: andale mono, monospace;">        self.p_primay_edit.setPlaceholderText("y")</span></p>
+<p>También se declaran elementos de interfaz para mostrar el punto obtenido de aplicar las transformaciones. Aquí no se requiere de un botón de dibujo ya que los métodos de transformación se encargan de dibujarlo.</p>
+<h2>Colocando los elementos en la interfaz</h2>
+<p><span style="font-family: andale mono, monospace;">        self.gridlayout.addWidget(self.p_label, 0, 0)</span><br /><span style="font-family: andale mono, monospace;">        self.gridlayout.addWidget(self.px_edit, 0, 1)</span><br /><span style="font-family: andale mono, monospace;">        self.gridlayout.addWidget(self.py_edit, 0, 2)</span><br /><span style="font-family: andale mono, monospace;">        self.gridlayout.addWidget(self.p_boton, 0, 3, 1, 2)</span></p>
+<p><span style="font-family: andale mono, monospace;">        self.gridlayout.addWidget(self.c_label, 1, 0)</span><br /><span style="font-family: andale mono, monospace;">        self.gridlayout.addWidget(self.cx_edit, 1, 1)</span><br /><span style="font-family: andale mono, monospace;">        self.gridlayout.addWidget(self.cy_edit, 1, 2)</span><br /><span style="font-family: andale mono, monospace;">        self.gridlayout.addWidget(self.c_boton, 1, 3, 1, 2)</span></p>
+<p><span style="font-family: andale mono, monospace;">        self.gridlayout.addWidget(self.t_label, 2, 0)</span><br /><span style="font-family: andale mono, monospace;">        self.gridlayout.addWidget(self.tx_edit, 2, 1)</span><br /><span style="font-family: andale mono, monospace;">        self.gridlayout.addWidget(self.ty_edit, 2, 2)</span><br /><span style="font-family: andale mono, monospace;">        self.gridlayout.addWidget(self.t_boton, 2, 3, 1, 2)</span></p>
+<p><span style="font-family: andale mono, monospace;">        self.gridlayout.addWidget(self.r_label, 3, 0)</span><br /><span style="font-family: andale mono, monospace;">        self.gridlayout.addWidget(self.r_edit, 3, 1, 1, 2)</span><br /><span style="font-family: andale mono, monospace;">        self.gridlayout.addWidget(self.r_boton, 3, 3, 1, 2)</span></p>
+<p><span style="font-family: andale mono, monospace;">        self.gridlayout.addWidget(self.s_label, 4, 0)</span><br /><span style="font-family: andale mono, monospace;">        self.gridlayout.addWidget(self.sx_edit, 4, 1)</span><br /><span style="font-family: andale mono, monospace;">        self.gridlayout.addWidget(self.sy_edit, 4, 2)</span><br /><span style="font-family: andale mono, monospace;">        self.gridlayout.addWidget(self.s_boton, 4, 3, 1, 2)</span></p>
+<p><span style="font-family: andale mono, monospace;">        self.gridlayout.addWidget(QLabel(""), 5, 0)</span><br /><span style="font-family: andale mono, monospace;">        self.gridlayout.addWidget(self.p_prima_label, 6, 0)</span><br /><span style="font-family: andale mono, monospace;">        self.gridlayout.addWidget(self.p_primax_edit, 6, 1, 1, 2)</span><br /><span style="font-family: andale mono, monospace;">        self.gridlayout.addWidget(self.p_primay_edit, 6, 3, 1, 2)</span></p>
+<p><span style="font-family: andale mono, monospace;">        self.hboxlayout.addWidget(self.canvas)</span><br /><span style="font-family: andale mono, monospace;">        self.hboxlayout.addWidget(self.sidebar)</span><br /><span style="font-family: andale mono, monospace;">        self.setCentralWidget(self.centro)</span></p>
+<p style="text-align: justify;">Los elementos que pertenecen a la barra lateral se van agregando a su QGridLayout. La función addWidget de ésta requiere el elemento a ser añadido, la fila donde será colocado, la columna, y opcionalmente el rango de filas que ocupará y el de columnas. Esto se usa para algunos elementos que buscamos que se vean más grandes. Finalmente se añade el canvas y la barra al QWidget central y se asigna a la ventana.</p>
+<h2 style="text-align: justify;">Pluma y pincel</h2>
+<p><span style="font-family: andale mono, monospace;">        self.p_pen = QPen(QColorConstants.DarkBlue)</span><br /><span style="font-family: andale mono, monospace;">        self.p_brush = QBrush(QColorConstants.DarkBlue)</span><br /><span style="font-family: andale mono, monospace;">        self.c_pen = QPen(QColorConstants.DarkYellow)</span><br /><span style="font-family: andale mono, monospace;">        self.c_brush = QBrush(QColorConstants.DarkYellow)</span><br /><span style="font-family: andale mono, monospace;">        self.p_prima_pen = QPen(QColorConstants.DarkMagenta)</span><br /><span style="font-family: andale mono, monospace;">        self.p_prima_brush = QBrush(QColorConstants.DarkMagenta)</span></p>
+<p>Ahora declaramos elementos relativos a la apariencia de la aplicación. La pluma especifica el contorno de los gráficos, mientras que el pincel especifica su fondo. Se declara uno de ellos por cada punto que será graficado: P, C y P'.</p>
+<h2>Las elipses P, C y P'</h2>
+<p><span style="font-family: andale mono, monospace;">        self.p = QGraphicsEllipseItem(0.0, 0.0, 6.0, 6.0)</span><br /><span style="font-family: andale mono, monospace;">        self.p.setPen(self.p_pen)</span><br /><span style="font-family: andale mono, monospace;">        self.p.setBrush(self.p_brush)</span><br /><span style="font-family: andale mono, monospace;">        self.p.setVisible(False)</span></p>
+<p><span style="font-family: andale mono, monospace;">        self.c = QGraphicsEllipseItem(0.0, 0.0, 6.0, 6.0)</span><br /><span style="font-family: andale mono, monospace;">        self.c.setPen(self.c_pen)</span><br /><span style="font-family: andale mono, monospace;">        self.c.setBrush(self.c_brush)</span><br /><span style="font-family: andale mono, monospace;">        self.c.setVisible(False)</span></p>
+<p><span style="font-family: andale mono, monospace;">        self.p_prima = QGraphicsEllipseItem(0.0, 0.0, 6.0, 6.0)</span><br /><span style="font-family: andale mono, monospace;">        self.p_prima.setPen(self.p_prima_pen)</span><br /><span style="font-family: andale mono, monospace;">        self.p_prima.setBrush(self.p_prima_brush)</span><br /><span style="font-family: andale mono, monospace;">        self.p_prima.setVisible(False)</span></p>
+<p><span style="font-family: andale mono, monospace;">        self.canvas_scene.addItem(self.p)</span><br /><span style="font-family: andale mono, monospace;">        self.canvas_scene.addItem(self.c)</span><br /><span style="font-family: andale mono, monospace;">        self.canvas_scene.addItem(self.p_prima)</span></p>
+<p style="text-align: justify;">Aquí declaramos el gráfico que representará cada punto en sí. Para representar los puntos usamos QGraphicsEllipseItem, una elipse con un diámetro relativamente alto para que sea visible más fácilmente. A cada una se le asignan la pluma y pincel creados anteriormente. Tras esto son añadidos al canvas, pero no serán visibles hasta que se llamen a sus métodos de dibujo.</p>
+<h2 style="text-align: justify;">Los ejes</h2>
+<p><span style="font-family: andale mono, monospace;">        self.canvas_scene.addEllipse(0, 0, 0, 0)</span><br /><span style="font-family: andale mono, monospace;">        self.canvas_scene.addLine(0, -650, 0, 650)</span><br /><span style="font-family: andale mono, monospace;">        self.canvas_scene.addLine(-650, 0, 650, 0)</span></p>
+<p style="text-align: justify;">Para finalizar el método <span style="font-family: andale mono, monospace;">__init__</span>, declaramos un punto en el centro del canvas, y dos líneas rectas que servirán para representar los ejes x y y.</p>
+<h1>Los métodos de dibujo (El Controlador)</h1>
+<p style="text-align: justify;">Estos son los métodos que realizan la graficación de los puntos en sí. En nuestro proyecto, son los que hacen el papel del Controlador, pues son el intermediario entre la Vista y el Modelo, permitiendo la comunicación entre éstos.</p>
+<p><span style="font-family: andale mono, monospace;">def dibujarP(self):</span><br /><span style="font-family: andale mono, monospace;">        self.p.setVisible(True)</span><br /><span style="font-family: andale mono, monospace;">        self.p.setX(int(self.px_edit.text()) - 3)</span><br /><span style="font-family: andale mono, monospace;">        self.p.setY(-int(self.py_edit.text()) - 3)</span></p>
+<p><span style="font-family: andale mono, monospace;">def dibujarC(self):</span><br /><span style="font-family: andale mono, monospace;">        self.c.setVisible(True)</span><br /><span style="font-family: andale mono, monospace;">        self.c.setX(int(self.cx_edit.text()) - 3)</span><br /><span style="font-family: andale mono, monospace;">        self.c.setY(-int(self.cy_edit.text()) - 3)</span></p>
+<p style="text-align: justify;">Para dibujar P y C en sí, primero se hacen visibles las elipses respectivas y se configuran sus valores x y y tres desplazadas tres unidades para tomar en cuenta el diámetro de las elipses, ya que se dibujan desde la esquina superior izquierda. Para estos valores se recupera el texto de los campos de texto correspondientes.</p>
+<p>Para el eje y, se asigna el valor negativo del valor dado, ya que en esta librería, y en la graficación de computadoras en general, el eje y incrementa de arriba hacia abajo.</p>
+<p><span style="font-family: andale mono, monospace;">    def trasladar(self):</span><br /><span style="font-family: andale mono, monospace;">        px = int(self.px_edit.text())</span><br /><span style="font-family: andale mono, monospace;">        py = int(self.py_edit.text())</span><br /><span style="font-family: andale mono, monospace;">        tx = int(self.tx_edit.text())</span><br /><span style="font-family: andale mono, monospace;">        ty = int(self.ty_edit.text())</span><br /><span style="font-family: andale mono, monospace;">        p_prima = self.tf.trasladar(px, py, tx, ty)</span><br /><span style="font-family: andale mono, monospace;">        p_primax = p_prima[0]</span><br /><span style="font-family: andale mono, monospace;">        p_primay = p_prima[1]</span><br /><span style="font-family: andale mono, monospace;">        self.p_prima.setVisible(True)</span><br /><span style="font-family: andale mono, monospace;">        self.p_prima.setX(p_primax - 3)</span><br /><span style="font-family: andale mono, monospace;">        self.p_prima.setY(-p_primay - 3)</span><br /><span style="font-family: andale mono, monospace;">        self.p_primax_edit.setText(str(p_primax))</span><br /><span style="font-family: andale mono, monospace;">        self.p_primay_edit.setText(str(p_primay))</span></p>
+<p><span style="font-family: andale mono, monospace;">    def rotar(self):</span><br /><span style="font-family: andale mono, monospace;">        px = int(self.px_edit.text())</span><br /><span style="font-family: andale mono, monospace;">        py = int(self.py_edit.text())</span><br /><span style="font-family: andale mono, monospace;">        angulo = int(self.r_edit.text())</span><br /><span style="font-family: andale mono, monospace;">        cx = int(self.cx_edit.text())</span><br /><span style="font-family: andale mono, monospace;">        cy = int(self.cy_edit.text())</span><br /><span style="font-family: andale mono, monospace;">        p_prima = self.tf.rotar(px, py, angulo, cx, cy)</span><br /><span style="font-family: andale mono, monospace;">        p_primax = p_prima[0]</span><br /><span style="font-family: andale mono, monospace;">        p_primay = p_prima[1]</span><br /><span style="font-family: andale mono, monospace;">        self.p_prima.setVisible(True)</span><br /><span style="font-family: andale mono, monospace;">        self.p_prima.setX(p_primax - 3)</span><br /><span style="font-family: andale mono, monospace;">        self.p_prima.setY(-p_primay - 3)</span><br /><span style="font-family: andale mono, monospace;">        self.p_primax_edit.setText(str(p_primax))</span><br /><span style="font-family: andale mono, monospace;">        self.p_primay_edit.setText(str(p_primay))</span></p>
+<p><span style="font-family: andale mono, monospace;">    def escalar(self):</span><br /><span style="font-family: andale mono, monospace;">        px = int(self.px_edit.text())</span><br /><span style="font-family: andale mono, monospace;">        py = int(self.py_edit.text())</span><br /><span style="font-family: andale mono, monospace;">        sx = int(self.sx_edit.text())</span><br /><span style="font-family: andale mono, monospace;">        sy = int(self.sy_edit.text())</span><br /><span style="font-family: andale mono, monospace;">        cx = int(self.cx_edit.text())</span><br /><span style="font-family: andale mono, monospace;">        cy = int(self.cy_edit.text())</span><br /><span style="font-family: andale mono, monospace;">        p_prima = self.tf.escalar(px, py, sx, sy, cx, cy)</span><br /><span style="font-family: andale mono, monospace;">        p_primax = p_prima[0]</span><br /><span style="font-family: andale mono, monospace;">        p_primay = p_prima[1]</span><br /><span style="font-family: andale mono, monospace;">        self.p_prima.setVisible(True)</span><br /><span style="font-family: andale mono, monospace;">        self.p_prima.setX(p_primax - 3)</span><br /><span style="font-family: andale mono, monospace;">        self.p_prima.setY(-p_primay - 3)</span><br /><span style="font-family: andale mono, monospace;">        self.p_primax_edit.setText(str(p_primax))</span><br /><span style="font-family: andale mono, monospace;">        self.p_primay_edit.setText(str(p_primay))</span></p>
+<p>Estos son los métodos que se llaman al presionar el botón correspondiente de la transformación. Básicamente, recuperan los datos de los campos de texto, y los envían a la instancia del Modelo (el objeto Transformado) para que realice las operaciones y devuelva el punto resultante, el cual es asignado a los valores x y y de la elipse P'.</p></div>
+</div>
+</div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper textIdevice em_iDevice em_iDevice_sport" id="id42">
+<div class="iDevice emphasis1" >
+<header class="iDevice_header" style="background-image:url(icon_sport.png)"><h1 class="iDeviceTitle">El método main</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta42_123_2" class="block iDevice_content">
+<div class="exe-text"><p><span style="font-family: andale mono, monospace;">def main():</span><br /><span style="font-family: andale mono, monospace;">    app = QApplication([])</span><br /><span style="font-family: andale mono, monospace;">    ventana = VentanaPrincipal()</span><br /><span style="font-family: andale mono, monospace;">    ventana.show()</span><br /><span style="font-family: andale mono, monospace;">    sys.exit(app.exec())</span><br /><span style="font-family: andale mono, monospace;">    </span><br /><span style="font-family: andale mono, monospace;">if __name__ == "__main__":</span><br /><span style="font-family: andale mono, monospace;">    main()</span></p>
+<p>En PyQt, el programa es manejado por una QApplication, a la que se le envía una lista de argumentos en caso de ser necesario. Se instancia una ventana principal y se muestra con la función <span style="font-family: andale mono, monospace;">show()</span>, que se encarga de todo el ciclo de eventos. La línea <span style="font-family: andale mono, monospace;">sys.exit(app.exec())</span> maneja el cerrado de la aplicación. Todo esto se define dentro de un método <span style="font-family: andale mono, monospace;">main()</span>, y por buena práctica, se llama tras verificar que el atributo <span style="font-family: andale mono, monospace;">__name__</span> sea igual a la cadena "__main__".</p></div>
+</div>
+</div>
+</div>
+</div>
+</article>
+<div id="packageLicense" class="cc cc-by-sa">
+<p><span>Obra publicada con</span> <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Licencia Creative Commons Reconocimiento Compartir igual 4.0</a></p>
+</div>
+</section>
+</div>
+<div id='bottomPagination'>
+<nav class="pagination noprt">
+<a href="modelo.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="uso_del_programa.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+</div>
+<script type="text/javascript" src="_cedec_js.js"></script></body></html>

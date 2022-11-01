@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="es">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>Escalamiento | Graficación en Python: Conceptos y Transformaciones </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta name="author" content="Santiago Vergara" />
+<link rel="license" type="text/html" href="http://creativecommons.org/licenses/by-sa/4.0/" />
+<meta name="generator" content="eXeLearning 2.7 - exelearning.net" />
+<!--[if lt IE 9]><script type="text/javascript" src="exe_html5.js"></script><![endif]-->
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+	</head>
+<body class="exe-web-site" id="exe-node-13"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<header id="header"  style="background-image: url(geometry4.png); background-repeat: repeat-x;"><div id="headerContent">Graficación en Python: Conceptos y Transformaciones</div></header>
+<nav id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">Graficación</a></li>
+   <li><a href="objetivo.html" class="no-ch">Objetivo</a></li>
+   <li><a href="introduccin.html" class="no-ch">Introducción</a></li>
+   <li><a href="desarrollo.html" class="daddy">Desarrollo</a>
+   <ul class="other-section">
+      <li><a href="transformaciones.html" class="no-ch">Transformaciones</a></li>
+      <li><a href="representacin.html" class="no-ch">Representación</a></li>
+      <li><a href="traslacin.html" class="no-ch">Traslación</a></li>
+      <li><a href="rotacin.html" class="no-ch">Rotación</a></li>
+      <li><a href="escalamiento.html" class="no-ch">Escalamiento</a></li>
+      <li><a href="otras_transformaciones.html" class="no-ch">Otras transformaciones</a></li>
+   </ul>
+   </li>
+   <li class="current-page-parent"><a href="ejemplos.html" class="current-page-parent daddy">Ejemplos</a>
+   <ul>
+      <li><a href="traslacin0.html" class="no-ch">Traslación</a></li>
+      <li><a href="rotacin0.html" class="no-ch">Rotación</a></li>
+      <li id="active"><a href="escalamiento0.html" class="active no-ch">Escalamiento</a></li>
+   </ul>
+   </li>
+   <li><a href="ejercicios.html" class="daddy">Ejercicios</a>
+   <ul class="other-section">
+      <li><a href="traslacin1.html" class="no-ch">Traslación</a></li>
+      <li><a href="rotacin1.html" class="no-ch">Rotación</a></li>
+      <li><a href="escalamiento1.html" class="no-ch">Escalamiento</a></li>
+   </ul>
+   </li>
+   <li><a href="programacin_en_python.html" class="daddy">Programación en Python</a>
+   <ul class="other-section">
+      <li><a href="configuracin.html" class="no-ch">Configuración</a></li>
+      <li><a href="modelo.html" class="no-ch">Modelo</a></li>
+      <li><a href="vista_y_controlador.html" class="no-ch">Vista y Controlador</a></li>
+      <li><a href="uso_del_programa.html" class="no-ch">Uso del programa</a></li>
+   </ul>
+   </li>
+   <li><a href="evaluacin.html" class="no-ch">Evaluación</a></li>
+   <li><a href="glosario.html" class="no-ch">Glosario</a></li>
+   <li><a href="referencias.html" class="no-ch">Referencias</a></li>
+   <li><a href="crditos.html" class="no-ch">Créditos</a></li>
+</ul>
+</nav>
+<div id='topPagination'>
+<nav class="pagination noprt">
+<a href="rotacin0.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="ejercicios.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+<div id="main-wrapper">
+<section id="main">
+<header id="nodeDecoration"><h1 id="nodeTitle">Escalamiento</h1></header>
+<article class="iDevice_wrapper textIdevice em_iDevice em_iDevice_present" id="id25">
+<div class="iDevice emphasis1" >
+<header class="iDevice_header" style="background-image:url(icon_present.png)"><h1 class="iDeviceTitle">Ejemplo de escalamiento respecto al origen</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta25_119_2" class="block iDevice_content">
+<div class="exe-text"><p>Se quiere escalar el punto <span style="font-family: book antiqua, palatino, serif;">P(-1, 1)</span> en un factor de 2 por ambos ejes. ¿Cuál es el punto resultante?</p>
+<h2><img src="EjemploEscalamiento.drawio.svg" alt="Diagrama del ejemplo de escalamiento" title="Ejemplo Escalamiento" style="display: block; margin-left: auto; margin-right: auto;" width="418" height="197" />Datos</h2>
+<div class="exe-math code-only exe-math-engine position-center">
+<p class="exe-math-code">\begin{equation} \begin{gathered} P = (-1, 1) \\ S = \begin{bmatrix} 2 &amp; 2 \end{bmatrix} \\ P' = (?, ?) \end{gathered} \end{equation}</p>
+</div>
+<h2>Procedimiento</h2>
+<p>Se multiplica el vector por la matriz de escalamiento para conseguir la tripla <span style="font-family: book antiqua, palatino, serif;">P'</span>.</p>
+<div class="exe-math code-only exe-math-engine position-center">
+<p class="exe-math-code">\begin{equation} P' = \begin{bmatrix} -1 &amp; 1 &amp; 1 \end{bmatrix} \begin{bmatrix} 2 &amp; 0 &amp; 0 \\ 0 &amp; 2 &amp; 0 \\ 0 &amp; 0 &amp; 1 \end{bmatrix} = \begin{bmatrix} -2 &amp; 2 &amp; 1 \end{bmatrix} \end{equation}</p>
+</div>
+<h2>Resultado</h2>
+<div class="exe-math code-only exe-math-engine position-center">
+<p class="exe-math-code">\begin{equation} P' = (-2, 2) \end{equation}</p>
+</div>
+<p style="text-align: center;"><img src="EjemploEscalamientoSolucion.drawio.svg" alt="Diagrama de la solución del ejemplo de escalamiento" title="Ejemplo Escalamiento Solución" width="247" height="231" /></p></div>
+</div>
+</div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper textIdevice em_iDevice em_iDevice_present" id="id26">
+<div class="iDevice emphasis1" >
+<header class="iDevice_header" style="background-image:url(icon_present.png)"><h1 class="iDeviceTitle">Ejemplo de escalamiento general</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta26_114_2" class="block iDevice_content">
+<div class="exe-text"><p>Se quiere escalar <span style="font-family: book antiqua, palatino, serif;">P(3, 3)</span> con respecto al punto <span style="font-family: book antiqua, palatino, serif;">C(1, 1)</span>, en un factor de 2 por ambos ejes. ¿Cuál es el punto resultante?</p>
+<p style="text-align: center;"><img src="EjemploEscalamientoGeneral.drawio.svg" alt="Diagrama de ejemplo de escalamiento general" title="Ejemplo Escalamiento General" width="458" height="233" /></p>
+<h2 style="text-align: left;">Datos</h2>
+<div class="exe-math code-only exe-math-engine position-center">
+<p class="exe-math-code">\begin{equation} \begin{gathered} P = (3, 3) \\ C = (1, 1) \\ S = \begin{bmatrix} 2 &amp; 2 \end{bmatrix} \\ P' = (?, ?) \end{gathered} \end{equation}</p>
+</div>
+<h2>Procedimiento</h2>
+<p>Se necesita hacer la multiplicación de tres matrices, <span style="font-family: book antiqua, palatino, serif;">T(-C)</span> que lleva el punto pivote al origen, <span style="font-family: book antiqua, palatino, serif;">S</span> que realiza el escalamiento y <span style="font-family: book antiqua, palatino, serif;">T(C)</span> que regresa el pivote a su posición original, y después multiplicar por el vector de <span style="font-family: book antiqua, palatino, serif;">P</span>.</p>
+<div class="exe-math code-only exe-math-engine position-center">
+<p class="exe-math-code">\begin{equation} P' = \begin{bmatrix} 3 &amp; 3 &amp; 0 \end{bmatrix} \begin{bmatrix} 1 &amp; 0 &amp; 0 \\ 0 &amp; 1 &amp; 0 \\ -1 &amp; -1 &amp; 1 \end{bmatrix} \begin{bmatrix} 2 &amp; 0 &amp; 0 \\ 0 &amp; 2 &amp; 0 \\ 0 &amp; 0 &amp; 1 \end{bmatrix} \begin{bmatrix} 1 &amp; 0 &amp; 0 \\ 0 &amp; 1 &amp; 0 \\ 1 &amp; 1 &amp; 1 \end{bmatrix} = \begin{bmatrix} 5 &amp; 5 &amp; 1 \end{bmatrix} \end{equation}</p>
+</div>
+<h2>Resultado</h2>
+<div class="exe-math code-only exe-math-engine position-center">
+<p class="exe-math-code">\begin{equation} P' = (5, 5) \end{equation}</p>
+</div>
+<p><img src="EjemploEscalamientoGeneralSolucion.drawio.svg" alt="Diagrama de la solución del ejemplo de escalamiento general" title="Ejemplo Escalamiento General Solución" style="display: block; margin-left: auto; margin-right: auto;" width="350" height="350" /></p></div>
+</div>
+</div>
+</div>
+</div>
+</article>
+<div id="packageLicense" class="cc cc-by-sa">
+<p><span>Obra publicada con</span> <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Licencia Creative Commons Reconocimiento Compartir igual 4.0</a></p>
+</div>
+</section>
+</div>
+<div id='bottomPagination'>
+<nav class="pagination noprt">
+<a href="rotacin0.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="ejercicios.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+</div>
+<script type="text/javascript" src="_cedec_js.js"></script></body></html>

@@ -1,0 +1,271 @@
+<!doctype html>
+<html lang="es">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="exe_effects.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>Introducción | Graficación en Python: Conceptos y Transformaciones </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta name="author" content="Santiago Vergara" />
+<link rel="license" type="text/html" href="http://creativecommons.org/licenses/by-sa/4.0/" />
+<meta name="generator" content="eXeLearning 2.7 - exelearning.net" />
+<!--[if lt IE 9]><script type="text/javascript" src="exe_html5.js"></script><![endif]-->
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="exe_effects.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+	</head>
+<body class="exe-web-site" id="exe-node-2"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<header id="header"  style="background-image: url(geometry4.png); background-repeat: repeat-x;"><div id="headerContent">Graficación en Python: Conceptos y Transformaciones</div></header>
+<nav id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">Graficación</a></li>
+   <li><a href="objetivo.html" class="no-ch">Objetivo</a></li>
+   <li id="active"><a href="introduccin.html" class="active no-ch">Introducción</a></li>
+   <li><a href="desarrollo.html" class="daddy">Desarrollo</a>
+   <ul class="other-section">
+      <li><a href="transformaciones.html" class="no-ch">Transformaciones</a></li>
+      <li><a href="representacin.html" class="no-ch">Representación</a></li>
+      <li><a href="traslacin.html" class="no-ch">Traslación</a></li>
+      <li><a href="rotacin.html" class="no-ch">Rotación</a></li>
+      <li><a href="escalamiento.html" class="no-ch">Escalamiento</a></li>
+      <li><a href="otras_transformaciones.html" class="no-ch">Otras transformaciones</a></li>
+   </ul>
+   </li>
+   <li><a href="ejemplos.html" class="daddy">Ejemplos</a>
+   <ul class="other-section">
+      <li><a href="traslacin0.html" class="no-ch">Traslación</a></li>
+      <li><a href="rotacin0.html" class="no-ch">Rotación</a></li>
+      <li><a href="escalamiento0.html" class="no-ch">Escalamiento</a></li>
+   </ul>
+   </li>
+   <li><a href="ejercicios.html" class="daddy">Ejercicios</a>
+   <ul class="other-section">
+      <li><a href="traslacin1.html" class="no-ch">Traslación</a></li>
+      <li><a href="rotacin1.html" class="no-ch">Rotación</a></li>
+      <li><a href="escalamiento1.html" class="no-ch">Escalamiento</a></li>
+   </ul>
+   </li>
+   <li><a href="programacin_en_python.html" class="daddy">Programación en Python</a>
+   <ul class="other-section">
+      <li><a href="configuracin.html" class="no-ch">Configuración</a></li>
+      <li><a href="modelo.html" class="no-ch">Modelo</a></li>
+      <li><a href="vista_y_controlador.html" class="no-ch">Vista y Controlador</a></li>
+      <li><a href="uso_del_programa.html" class="no-ch">Uso del programa</a></li>
+   </ul>
+   </li>
+   <li><a href="evaluacin.html" class="no-ch">Evaluación</a></li>
+   <li><a href="glosario.html" class="no-ch">Glosario</a></li>
+   <li><a href="referencias.html" class="no-ch">Referencias</a></li>
+   <li><a href="crditos.html" class="no-ch">Créditos</a></li>
+</ul>
+</nav>
+<div id='topPagination'>
+<nav class="pagination noprt">
+<a href="objetivo.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="desarrollo.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+<div id="main-wrapper">
+<section id="main">
+<header id="nodeDecoration"><h1 id="nodeTitle">Introducción</h1></header>
+<article class="iDevice_wrapper textIdevice em_iDevice em_iDevice_technology" id="id4">
+<div class="iDevice emphasis1" >
+<header class="iDevice_header" style="background-image:url(icon_technology.png)"><h1 class="iDeviceTitle">Definiciones</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta4_123_2" class="block iDevice_content">
+<div class="exe-text"><div class="exe-fx exe-tabs">
+<h2>Definición de graficación</h2>
+<div class="exe-layout-2-cols exe-layout-2-50-50 exe-clear">
+<div class="exe-col exe-col-1">
+<p style="text-align: justify;"> </p>
+<p style="text-align: justify;"> </p>
+<p style="text-align: justify;">  </p>
+<ol>
+<li style="text-align: justify;">Representación de algo con figuras o símbolos.</li>
+<li style="text-align: justify;">Especificación o aclaración de algo con ejemplos.</li>
+</ol>
+</div>
+<div class="exe-col exe-col-2">
+<p><img src="simbolos.png" alt="Colección de íconos" title="Símbolos" style="display: block; margin-left: auto; margin-right: auto;" width="479" height="419" /></p>
+</div>
+</div>
+<h2>Definición de graficación por computadora</h2>
+<div class="exe-layout-2-cols exe-layout-2-50-50 exe-clear">
+<div class="exe-col exe-col-1">
+<p style="text-align: justify;"></p>
+<p style="text-align: justify;"> </p>
+<p style="text-align: justify;">Es el estudio de algoritmos para el diseño e implementación de representaciones gráficas de los datos y sus relaciones entre sí.</p>
+<p style="text-align: justify;">Los gráficos por computadora son un área de conocimiento acerca de cómo crear imágenes usando computadoras. Por lo general, esto se logra procesando información que representa lo que se quiere graficar, como objetos, colores e iluminación.</p>
+</div>
+<div class="exe-col exe-col-2">
+<p><img src="graficacion2.png" alt="Diferentes figuras generadas por computadora" title="Graficos por computadora" style="display: block; margin-left: auto; margin-right: auto;" width="384" height="399" /></p>
+</div>
+</div>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper textIdevice em_iDevice em_iDevice_pieces" id="id7">
+<div class="iDevice emphasis1" >
+<header class="iDevice_header" style="background-image:url(icon_pieces.png)"><h1 class="iDeviceTitle">Historia de la graficación</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta7_115_2" class="block iDevice_content">
+<div class="exe-text"><div class="exe-fx exe-paginated">
+<h2>1950</h2>
+<div class="exe-layout-2-cols exe-layout-2-50-50 exe-clear">
+<div class="exe-col exe-col-1">
+<p style="text-align: justify; padding-left: 30px;">El desarrollo de los gráficos por computadora comenzó a principios de la década de 1950, cuando proyectos como Whirlwind y Sage desarrollaron el Cathode Ray Tube (Tubo de Rayos Catódicos) que se usó para mostrar gráficos visuales y se usó un lápiz óptico como dispositivo de entrada para escribir en la pizarra. En 1958, William Higinbotham desarrolló el primer videojuego, <em>Tenis para dos</em>, con gráficos interactivos, para entretener a los visitantes del Laboratorio Nacional de Brookhaven. Se realizaron muchos avances en la misma década, como el desarrollo de una computadora TX2 junto con un software de bloc de dibujo que ayudó a dibujar formas básicas en la pantalla con un lápiz óptico y guardarlas para uso futuro.</p>
+</div>
+<div class="exe-col exe-col-2">
+<p><img src="proyecto-whirlwind.jpg" alt="Personas trabajando en la computadora Whirlwind" style="display: block; margin-left: auto; margin-right: auto;" width="310" height="232" /></p>
+<p><img src="tennis_for_two.jpg" alt="Imagen de Tenis para dos en funcionamiento" style="display: block; margin-left: auto; margin-right: auto;" width="304" height="210" /></p>
+</div>
+</div>
+<h2>1960</h2>
+<div class="exe-layout-2-cols exe-layout-2-50-50 exe-clear">
+<div class="exe-col exe-col-1">
+<p style="text-align: justify;"> </p>
+<p style="text-align: justify;"> </p>
+<p style="text-align: justify; padding-left: 30px;">El término de gráficos por computadora fue acuñado por William Fetter en 1960. En 1963, E.E. Zajac, del Bell Telephone Laboratory creó una película usando animaciones y gráficos que podían mostrar el movimiento de los satélites y su cambio de altitudes alrededor de la órbita de la Tierra. A finales de la década de 1960, IBM lanzó la primera computadora gráfica para uso comercial: IBM 2250. En 1966, Ralph Baer desarrolló un videojuego simple en el que se podían mover puntos de luz en una pantalla. En 1966, Ivan Sutherland inventó la primera pantalla montada en la cabeza que contenía dos imágenes de estructura metálica separadas y proporcionaba un efecto 3D.</p>
+</div>
+<div class="exe-col exe-col-2">
+<p><img src="edward-zajac-pelicula.png" alt="Película animada de los planetas de Edward Zajac" style="display: block; margin-left: auto; margin-right: auto;" width="276" height="173" /></p>
+<p style="text-align: center;"><img src="ibm_2250.jpg" alt="Fotografía de una persona usando la IBM 2250 con un lápiz" width="273" height="210" /></p>
+<p><img src="ivan-sutherland-headset.jpg" alt="Imagen de una persona usando el headset the Ivan Sutherland" style="display: block; margin-left: auto; margin-right: auto;" width="271" height="176" /></p>
+</div>
+</div>
+<br />
+<h2>1970</h2>
+<div class="exe-layout-2-cols exe-layout-2-50-50 exe-clear">
+<div class="exe-col exe-col-1">
+<p style="text-align: justify; padding-left: 30px;">La década de 1970 vio un cambio importante en los gráficos por computadora que permitieron tecnologías como los microprocesadores MOS LSI. Edwin Catmull creó una animación de la apertura y el cierre de su mano. Junto con él, su compañero de clase, Fred Parke, creó una animación del rostro de su esposa. John Warnock, uno de los primeros pioneros, fundó Adobe Systems, que es hoy en día es una compañía que desarrolla el software más utilizado para edición de imagen y video. Más tarde, se desarrollaron muchos videojuegos de arcade en 2D, como <em>Pong, Speed ​​game, Gunfight, Space Invaders</em>, etc.</p>
+</div>
+<div class="exe-col exe-col-2">
+<p style="text-align: center;"><img src="animacion-mano-edwim-catmull.png" alt="Animación de la mano de Edwin Catmull" style="display: block; margin-left: auto; margin-right: auto;" width="306" height="218" /></p>
+</div>
+<div class="exe-col exe-col-2" style="text-align: center;"><img src="mos-lsi.jpg" alt="Libro sobre los procesadores MOS-LSI" width="157" height="218" /> <img src="space-invarders.jpg" alt="Gabinete de Space Invaders" width="146" height="219" /></div>
+</div>
+<h2>1980</h2>
+<div class="exe-layout-2-cols exe-layout-2-50-50 exe-clear">
+<div class="exe-col exe-col-1">
+<p style="text-align: justify; padding-left: 30px;">A principios de la década de 1980, los gráficos por computadora de alta resolución y los sistemas de computadoras personales comenzaron a revolucionar este campo. Muchos microprocesadores y microcontroladores de CPU se desarrollaron para dar origen a chips de unidades de procesamiento gráfico (GPU). En 1982, la Universidad de Osaka de Japón desarrolló una supercomputadora que utilizaba 257 microprocesadores Zilog Z8001 para mostrar gráficos 3D realistas. La década de 1980 se llamó la era dorada de los videojuegos. Muchas compañías como Atari, Nintendo y Sega presentaron gráficos por computadora con una interfaz completamente nueva para la audiencia. Empresas como Apple y Amiga permitieron a los usuarios programar sus propios juegos. Se realizaron avances en tiempo real en gráficos 3D en juegos de arcade. En esta década, el uso de gráficos por computadora se extendió a muchas industrias como la industria automotriz, diseño de vehículos, simulación de vehículos, química, etc.</p>
+</div>
+<div class="exe-col exe-col-2">
+<p style="text-align: center;"> </p>
+<p style="text-align: center;"><img src="amiga.jpg" alt="Computadora Amiga" width="313" height="226" /></p>
+<p><img src="mastersystem.jpg" alt="Sega Mastersystem" style="display: block; margin-left: auto; margin-right: auto;" width="315" height="236" /></p>
+</div>
+</div>
+<h2>1990</h2>
+<div class="exe-layout-2-cols exe-layout-2-50-50 exe-clear">
+<div class="exe-col exe-col-1">
+<p style="text-align: justify; padding-left: 30px;"> </p>
+<p style="text-align: justify; padding-left: 30px;">La década de 1990 fue un período en el que florecieron los gráficos por computadora en 3D y se desarrollaron a gran escala. Los modelos 3D se hicieron populares en juegos, multimedia y animaciones. En 1995, Pixar lanzó su primera película animada comercial, <em>Toy Story</em>, que fue un gran éxito comercialmente. Aparecieron muchos juegos en 3D como juegos de carreras, de disparos en primera persona, de lucha y plataformas, que comenzaron a atraer a la audiencia con su interfaz y experiencia de juego. Desde estos avances, los gráficos por computadora continuaron siendo más realistas y siguieron desarrollándose y expandiendo su uso en varios campos.</p>
+</div>
+<div class="exe-col exe-col-2">
+<p><img src="cgi-temprano.jpg" alt="Imágenes CGI de esféras" style="display: block; margin-left: auto; margin-right: auto;" width="268" height="201" /></p>
+<p style="text-align: center;"><img src="toy-story.jpg" alt="Captura de Toy Story" width="270" height="202" /></p>
+<p style="text-align: center;"><img src="mario-64.jpg" alt="Captura de Super Mario 64" width="268" height="201" /></p>
+</div>
+</div>
+<h2>2000</h2>
+<div class="exe-layout-2-cols exe-layout-2-50-50 exe-clear">
+<div class="exe-col exe-col-1">
+<p style="text-align: justify; padding-left: 30px;">Los videojuegos y el cine se convirtieron en la corriente principal de los gráficos por computadora. El CGI (<em>Computer Generated Imagery</em>, Imágenes Generadas por Computadora) se utilizó ampliamente para anuncios de televisión a finales de los años 90 y 2000, y atrajo a una gran parte de la audiencia. La gran popularidad de los gráficos por computadora hizo de los gráficos en 3D una característica estándar para ser utilizada en la mayoría de los campos. Se realizaron muchas mejoras y los gráficos de computadora utilizados en películas y videojuegos se hicieron más realistas para atraer a la audiencia en gran escala. Muchas películas de dibujos animados, como <em>La Era del Hielo</em> y <em>Madagascar</em>, se convirtieron en una de las favoritas de la audiencia y dominaron la taquilla. Se produjeron muchos largometrajes generados por computadora como <em>El Expreso Polar</em> y <em>Star Wars</em>, que tuvieron un gran impacto en su momento. Los videojuegos también vieron una mejora importante con el lanzamiento de la Playstation 2 y 3, Xbox y Gamecube.</p>
+</div>
+<div class="exe-col exe-col-2">
+<p style="text-align: center;"> </p>
+<p style="text-align: center;"> </p>
+<p style="text-align: center;"><img src="la_era_de_hielo_4.jpg" alt="La Era del Hielo" width="355" height="213" /></p>
+<p style="text-align: center;"><img src="star-wars.jpg" alt="Captura de Star Wars Episodio I" width="354" height="177" /></p>
+</div>
+</div>
+<h2>2010</h2>
+<div class="exe-layout-2-cols exe-layout-2-50-50 exe-clear">
+<div class="exe-col exe-col-1">
+<p style="text-align: justify; padding-left: 30px;">En la década de 2010, el CGI expandió su uso y proporcionó gráficos en tiempo real en modos de resolución ultra alta en 4K. La mayoría de las películas animadas ahora son CGI con imágenes y dibujos animados en 3D. En los videojuegos, Xbox y PlayStation comenzaron a dominar el mundo 3D y también son uno de los más populares entre los usuarios en la actualidad.</p>
+<p style="text-align: justify; padding-left: 30px;">Desde entonces, el mundo de los gráficos por computadora ha seguido desarrollándose y ha recibido muchos elogios de la audiencia por enriquecer su experiencia y proporcionar una gran plataforma para interactuar con gráficos por computadora de alta resolución.</p>
+</div>
+<div class="exe-col exe-col-2">
+<p style="text-align: center;"><img src="cad.1.jpg" alt="Software de arquitectura CAD" width="363" height="204" /></p>
+<p style="text-align: center;"><img src="ff7.jpg" alt="Final Fantasy 7 Remake" width="365" height="205" /></p>
+</div>
+</div>
+<p style="text-align: left;"><br /><br /></p>
+</div>
+<p></p></div>
+</div>
+</div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper textIdevice em_iDevice em_iDevice_calculate" id="id5">
+<div class="iDevice emphasis1" >
+<header class="iDevice_header" style="background-image:url(icon_calculate.png)"><h1 class="iDeviceTitle">Aplicaciones de la graficación</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta5_124_2" class="block iDevice_content">
+<div class="exe-text"><div class="exe-fx exe-carousel">
+<h2>Gráficos y diagramas</h2>
+<p style="text-align: justify;">Representación gráfica de datos que muestran relaciones entre ellos para formar informes escritos o para presentarlos mediante diapositivas, transparencias o animaciones.</p>
+<p style="text-align: justify;">Los gráficos y diagramas se usan comúnmente para realizar resúmenes financieros, estadísticos, matemáticos, científicos, de ingeniería y económicos para realizar informes de investigación, resúmenes de gestión, boletines de información al consumidor y otros tipos de publicaciones.</p>
+<p style="text-align: center;"><img src="graficos.png" alt="Diferentes tipos de gráficos" width="276" height="276" /></p>
+<h2 class="exe-col exe-col-1">Procesamiento de imágenes</h2>
+<p style="text-align: justify;">Es la modificación o interpretación de imágenes existentes, como fotografías. Las técnicas de procesamiento de imágenes se utilizan para mejorar la calidad de un dibujo, analizar las imágenes o reconocer patrones visuales para aplicaciones robotizadas.</p>
+<p style="text-align: center;"><img src="procesamiento.jpeg" alt="Lente de una cámara con efectos de computadora" width="465" height="204" /></p>
+<h2>Diseño asistido por computadora</h2>
+<p style="text-align: justify;">Herramientas que se usan en los procesos de arquitectura e ingeniería.</p>
+<p style="text-align: justify;">En algunas aplicaciones de diseño, los objetos se visualizan primero en su modelo alámbrico, mostrando su forma general y sus características internas. El modelo alámbrico permite a los diseñadores ver rápidamente los efectos de los ajustes interactivos que se hacen en las formas sin esperar a que la superficie completa de los objetos esté completamente generada.</p>
+<p style="text-align: center;"><img src="cad.jpg" alt="Software CAD" width="311" height="175" />   <img src="cabeza-wireframe.jpeg" alt="Modelo alámbrico de una cabeza en 3D" width="311" height="175" /></p>
+<h2>Entornos de realidad virtual</h2>
+<p style="text-align: justify;">Entornos en los que el usuario puede interactuar con los objetos en una escena tridimensional.</p>
+<p style="text-align: justify;">Dispositivos hardware especializados proporcionan efectos de visión tridimensional y permiten al usuario hacer contacto con los objetos de la escena.</p>
+<p style="text-align: center;"><img src="vr2.jpg" alt="Persona en un escenario de realidad vritual" width="388" height="218" /></p>
+<h2 style="text-align: justify;">Visualización de datos</h2>
+<p style="text-align: justify;">Generación de representaciones gráficas de conjuntos de datos o procesos de naturaleza científica, de ingeniería o de medicina.</p>
+<p style="text-align: justify;">Se usa para conjuntos de datos relacionados con el comercio, la industria y otras áreas no científicas.</p>
+<p style="text-align: center;"><img src="visualizacion-de-datos2.jpg" alt="Diferentes gráficos y modelos de datos" width="446" height="197" /></p>
+<h2>Educación y formación</h2>
+<p style="text-align: justify;">Los modelos generados por computadora de sistemas físicos, financieros, políticos, sociales, económicos y otros se usan frecuentemente como ayudas para la educación.</p>
+<p style="text-align: justify;">Ejemplos de este tipo de sistemas son los simuladores para las sesiones prácticas de formación de capitanes de barco, pilotos de aeronaves, operadores de maquinaria pesada, personal de control de tráfico aéreo, etc.</p>
+<p style="text-align: center;"><img src="simulador-de-vuelo.jpg" alt="Personas en un simulador de vuelo" width="455" height="213" /></p>
+<h2>Arte por computadora</h2>
+<p style="text-align: justify;">Tanto el arte puro como el comercial hacen uso de los métodos de los gráficos por computadora.</p>
+<p style="text-align: justify;">Los artistas tienen disponibles una variedad de métodos y herramientas así como software de escritorio para publicación y sistemas de animación que proporcionan capacidades para diseñar formas de objetos y especificar sus movimientos.</p>
+<p style="text-align: center;"><img src="arte-digital.jpg" alt="Dibujo digital en una tableta" width="302" height="226" />   <img src="arte-digital2.jpg" alt="Arte digital de un fondo" title="Arte digital" width="340" height="226" /></p>
+<h2>Entretenimiento</h2>
+<p style="text-align: justify;">Las producciones de televisión, las películas de cine, los vídeos musicales y los videojuegos usan de manera rutinaria los gráficos por computadora.</p>
+<p style="text-align: justify;">Algunas veces estas imágenes se combinan con actores reales y escenas filmadas, o también se usan los gráficos por computadora para generar edificios, rasgos del terreno u otros fondos de escenas.</p>
+<p style="text-align: center;"><img src="cgi-peliculas.jpg" alt="Tomas de películas que usan CGI" width="315" height="210" />   <img src="captura-de-videojuego.jpg" alt="Captura de un videojuego con gráficos realistas" width="374" height="210" /></p>
+<h2>Interfaces gráficas de usuario</h2>
+<p style="text-align: justify;">Hoy día es muy común que las aplicaciones software se proporcionen con interfaces gráficas de usuario.</p>
+<p style="text-align: justify;">Un componente principal en una interfaz gráfica es un gestor de ventanas que permita al usuario visualizar múltiples áreas rectangulares de la pantalla, llamadas ventanas de visualización.</p>
+<p style="text-align: justify;">Cada área de visualización en la pantalla contiene un proceso diferente, mostrando información gráfica o de otro tipo.</p>
+<p style="text-align: center;"><img src="gui3.png" alt="Interfaz gráfica de usuario de Windows 8" width="307" height="150" />   <img src="gui4.jpg" alt="Interfaces de móviles" title="Interfaz móvil" width="337" height="150" /></p>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+</article>
+<div id="packageLicense" class="cc cc-by-sa">
+<p><span>Obra publicada con</span> <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Licencia Creative Commons Reconocimiento Compartir igual 4.0</a></p>
+</div>
+</section>
+</div>
+<div id='bottomPagination'>
+<nav class="pagination noprt">
+<a href="objetivo.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="desarrollo.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+</div>
+<script type="text/javascript" src="_cedec_js.js"></script></body></html>

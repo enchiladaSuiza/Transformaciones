@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="es">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>Modelo | Graficación en Python: Conceptos y Transformaciones </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta name="author" content="Santiago Vergara" />
+<link rel="license" type="text/html" href="http://creativecommons.org/licenses/by-sa/4.0/" />
+<meta name="generator" content="eXeLearning 2.7 - exelearning.net" />
+<!--[if lt IE 9]><script type="text/javascript" src="exe_html5.js"></script><![endif]-->
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+	</head>
+<body class="exe-web-site" id="exe-node-20"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<header id="header"  style="background-image: url(geometry4.png); background-repeat: repeat-x;"><div id="headerContent">Graficación en Python: Conceptos y Transformaciones</div></header>
+<nav id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">Graficación</a></li>
+   <li><a href="objetivo.html" class="no-ch">Objetivo</a></li>
+   <li><a href="introduccin.html" class="no-ch">Introducción</a></li>
+   <li><a href="desarrollo.html" class="daddy">Desarrollo</a>
+   <ul class="other-section">
+      <li><a href="transformaciones.html" class="no-ch">Transformaciones</a></li>
+      <li><a href="representacin.html" class="no-ch">Representación</a></li>
+      <li><a href="traslacin.html" class="no-ch">Traslación</a></li>
+      <li><a href="rotacin.html" class="no-ch">Rotación</a></li>
+      <li><a href="escalamiento.html" class="no-ch">Escalamiento</a></li>
+      <li><a href="otras_transformaciones.html" class="no-ch">Otras transformaciones</a></li>
+   </ul>
+   </li>
+   <li><a href="ejemplos.html" class="daddy">Ejemplos</a>
+   <ul class="other-section">
+      <li><a href="traslacin0.html" class="no-ch">Traslación</a></li>
+      <li><a href="rotacin0.html" class="no-ch">Rotación</a></li>
+      <li><a href="escalamiento0.html" class="no-ch">Escalamiento</a></li>
+   </ul>
+   </li>
+   <li><a href="ejercicios.html" class="daddy">Ejercicios</a>
+   <ul class="other-section">
+      <li><a href="traslacin1.html" class="no-ch">Traslación</a></li>
+      <li><a href="rotacin1.html" class="no-ch">Rotación</a></li>
+      <li><a href="escalamiento1.html" class="no-ch">Escalamiento</a></li>
+   </ul>
+   </li>
+   <li class="current-page-parent"><a href="programacin_en_python.html" class="current-page-parent daddy">Programación en Python</a>
+   <ul>
+      <li><a href="configuracin.html" class="no-ch">Configuración</a></li>
+      <li id="active"><a href="modelo.html" class="active no-ch">Modelo</a></li>
+      <li><a href="vista_y_controlador.html" class="no-ch">Vista y Controlador</a></li>
+      <li><a href="uso_del_programa.html" class="no-ch">Uso del programa</a></li>
+   </ul>
+   </li>
+   <li><a href="evaluacin.html" class="no-ch">Evaluación</a></li>
+   <li><a href="glosario.html" class="no-ch">Glosario</a></li>
+   <li><a href="referencias.html" class="no-ch">Referencias</a></li>
+   <li><a href="crditos.html" class="no-ch">Créditos</a></li>
+</ul>
+</nav>
+<div id='topPagination'>
+<nav class="pagination noprt">
+<a href="configuracin.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="vista_y_controlador.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+<div id="main-wrapper">
+<section id="main">
+<header id="nodeDecoration"><h1 id="nodeTitle">Modelo</h1></header>
+<article class="iDevice_wrapper textIdevice em_iDevice em_iDevice_info" id="id38">
+<div class="iDevice emphasis1" >
+<header class="iDevice_header" style="background-image:url(icon_info.png)"><h1 class="iDeviceTitle">Sobre el proyecto</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta38_119_2" class="block iDevice_content">
+<div class="exe-text"><p style="text-align: justify;">Ahora empezaremos con la codificación del programa. Se recomienda instalar algún editor de textos o ambiente de desarrollo integrado, como <em>Visual Studio Code</em> o <em>Spyder</em>. Es posible descargarlos e instalarlos desde sus páginas oficiales respectivas. Claro que también es posible usar el bloc de notas para la programación. Para ejecutar los programas, solo se debará ejecutar el comando <span style="font-family: andale mono, monospace;">python nombre_del_archivo.py</span>.</p>
+<p style="text-align: justify;">Para la elaboración del programa, se seguirá el patrón de diseño Modelo-Vista-Controlador. Éste nos permite separar las funcionalidades de la lógica del programa e interfaz de usuario. El Modelo se encarga de la primera, y lo encapsularemos dentro de un archivo de código python. En la próxima sección se realizará la Vista y el Controlador en su respectivo archivo.</p>
+<p style="text-align: justify;">El archivo para el Modelo será <em>matriz.py</em>, que contendrá una clase que representa una matriz en dos dimensiones, y proveerá operaciones que serán útiles para posteriormente realizar las transformaciones.</p></div>
+</div>
+</div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper textIdevice em_iDevice em_iDevice_letters" id="id37">
+<div class="iDevice emphasis1" >
+<header class="iDevice_header" style="background-image:url(icon_letters.png)"><h1 class="iDeviceTitle">La clase Matriz</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta37_118_2" class="block iDevice_content">
+<div class="exe-text"><p style="text-align: justify;">Necesitamos importar la librería <em>math, </em>que nos brinda las funciones trigonométricas.</p>
+<p style="text-align: justify;"><span style="font-family: andale mono, monospace;">import math</span></p>
+<p style="text-align: justify;">Posteriormente declaramos la clase Matriz</p>
+<p style="text-align: justify;"><span style="font-family: andale mono, monospace;">class Matriz:</span><br /><span style="font-family: andale mono, monospace;">    def __init__(self, filas, columnas, valor=0):</span><br /><span style="font-family: andale mono, monospace;">        self.filas = filas</span><br /><span style="font-family: andale mono, monospace;">        self.columnas = columnas</span><br /><span style="font-family: andale mono, monospace;">        self.matriz = [[]]</span><br /><span style="font-family: andale mono, monospace;">        for fila in range(filas):</span><br /><span style="font-family: andale mono, monospace;">            for _ in range(columnas):</span><br /><span style="font-family: andale mono, monospace;">                self.matriz[fila].append(valor)</span><br /><span style="font-family: andale mono, monospace;">            self.matriz.append([])</span></p>
+<p style="text-align: justify;">El método <span style="font-family: andale mono, monospace;">__init__</span> es el método constructor de la clase. Tiene como parámetros el número de filas y columnas de la matriz, junto con un valor númerico que se puede declarar para todos los valores de la matriz. El método se encarga de incializar los atributos del nuevo objeto con estos valores.</p>
+<p style="text-align: justify;">Un método que nos resultará útil es el método <span style="font-family: andale mono, monospace;">__str__</span>.</p>
+<p style="text-align: justify;"><span style="font-family: andale mono, monospace;">def __str__(self):</span><br /><span style="font-family: andale mono, monospace;">        cadena = ''</span><br /><span style="font-family: andale mono, monospace;">        for fila in range(self.filas):</span><br /><span style="font-family: andale mono, monospace;">            cadena += str(self.matriz[fila]) + '\n'</span><br /><span style="font-family: andale mono, monospace;">        return cadena</span></p>
+<p style="text-align: justify;">Este método devuelve una cadena de caracteres multilínea que representa a la matriz. Este método se llama automáticamente en contextos donde se requiere una cadena, como en la función <span style="font-family: andale mono, monospace;">print()</span>.</p>
+<p style="text-align: justify;">El método más importante de esta clase es <span style="font-family: andale mono, monospace;">__mul__</span>,</p>
+<p style="text-align: justify;"><span style="font-family: andale mono, monospace;">def __mul__(self, multiplicando):</span><br /><span style="font-family: andale mono, monospace;">        if (type(multiplicando) is int or type(multiplicando) is float):</span><br /><span style="font-family: andale mono, monospace;">            return self.multiplicacion_escalar(multiplicando)</span><br /><span style="font-family: andale mono, monospace;">        elif (self.columnas == multiplicando.filas):</span><br /><span style="font-family: andale mono, monospace;">            return self.multiplicacion_matricial(multiplicando)</span><br /><span style="font-family: andale mono, monospace;">        print("Las matrices no se pueden multiplicar")</span><br /><span style="font-family: andale mono, monospace;">        return None</span></p>
+<p style="text-align: justify;"><span style="font-family: andale mono, monospace;">__mul__</span> se llama cuando usamos el operador de multiplicación (<span style="font-family: andale mono, monospace;">*</span>) en un operando dde tipo Matriz, y devuelve otro objeto con el resultado correspondiente u algún otro tipo de dato. Existen dos formas de realizar multiplicaciones con matrices, <em>escalar</em> y <em>matricial</em>. La mutliplicación escalar mutliplica a una matriz por un solo número, mientras que la matricial, como su nombre lo dice, es entre dos matrices. Este método revisa el tipo del operando con el que se llama, si es un solo número entero o flotante, se envía a otro método que realiza la multiplicación escalar. De otra forma se asume que el mutliplicando es otro objeto matriz, y se envía al método correspondiente de mutliplicación matricial. Sin embargo, para poder llevar a cabo la multiplicación matricial, se debe verificar que el número de columnas del primer operando coincida con el número de filas del segundo. De no satisfacerse alguna de estas condiciones, se avisa al usuario con un mensaje y se devuelve None.</p>
+<p style="text-align: justify;">Los métodos de multiplicación respectivos son los siguientes.</p>
+<p style="text-align: justify;"><span style="font-family: andale mono, monospace;">def multiplicacion_escalar(self, escalar):</span><br /><span style="font-family: andale mono, monospace;">        producto = Matriz(self.filas, self.columnas)</span><br /><span style="font-family: andale mono, monospace;">        for i in range(producto.filas):</span><br /><span style="font-family: andale mono, monospace;">            for j in range(producto.columnas):</span><br /><span style="font-family: andale mono, monospace;">                producto.matriz[i][j] = self.matriz[i][j] * escalar</span><br /><span style="font-family: andale mono, monospace;">        return producto</span><br /><span style="font-family: andale mono, monospace;">    </span></p>
+<p style="text-align: justify;"><span style="font-family: andale mono, monospace;">def multiplicacion_matricial(self, otra):</span><br /><span style="font-family: andale mono, monospace;">        producto = Matriz(self.filas, otra.columnas)</span><br /><span style="font-family: andale mono, monospace;">        for i in range(producto.filas):</span><br /><span style="font-family: andale mono, monospace;">            for j in range(producto.columnas):</span><br /><span style="font-family: andale mono, monospace;">                for k in range(self.columnas):</span><br /><span style="font-family: andale mono, monospace;">                    producto.matriz[i][j] += self.matriz[i][k] * otra.matriz[k][j]</span><br /><span style="font-family: andale mono, monospace;">        return producto</span></p>
+<p style="text-align: justify;">En la multiplicación escalar, simplemente se mutliplica cada elemento de la matriz por el valor escalar. La multiplicación matricial se lleva a cabo como fue visto en la sección de Desarrollo. El algoritmo está simplificado para aprovechar las variables de los ciclos <span style="font-family: andale mono, monospace;">for</span>.</p>
+<p style="text-align: justify;">Para propósitos de prueva, declararemos una función que nos permita asignar cada elemento de la matriz por entradas de usuario.</p>
+<p style="text-align: justify;"><span style="font-family: andale mono, monospace;">def llenar_individual(self):</span><br /><span style="font-family: andale mono, monospace;">        for fila in range(self.filas):</span><br /><span style="font-family: andale mono, monospace;">            for columna in range(self.columnas):</span><br /><span style="font-family: andale mono, monospace;">                entrada = input(f"Valor [{fila}][{columna}]: ")</span><br /><span style="font-family: andale mono, monospace;">                try:</span><br /><span style="font-family: andale mono, monospace;">                    self.matriz[fila][columna] = int(entrada)</span><br /><span style="font-family: andale mono, monospace;">                except:</span><br /><span style="font-family: andale mono, monospace;">                    self.matriz[fila][columna] = float(entrada)</span><br /><span style="font-family: andale mono, monospace;">        print()</span></p>
+<p style="text-align: justify;">Se recomienda que, hasta este punto, el lector realice pruebas con los métodos creados para asegurarse de que el código escrito sea correcto. Cabe recordar que es posible imprimir los elementos de cualquier objeto matriz con simplemente llamar <span style="font-family: andale mono, monospace;">print(objeto_matriz)</span>.</p></div>
+</div>
+</div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper textIdevice em_iDevice em_iDevice_arts" id="id39">
+<div class="iDevice emphasis1" >
+<header class="iDevice_header" style="background-image:url(icon_arts.png)"><h1 class="iDeviceTitle">La clase Transformador</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta39_120_2" class="block iDevice_content">
+<div class="exe-text"><p style="text-align: justify;"><em>matriz.py</em> también contendrá una clase llamada Transformador, que hará uso de objetos Matriz para llevar a cabo las transformaciones de traslación, rotación y escalamiento.</p>
+<p><span style="font-family: andale mono, monospace;">class Transformador:</span></p>
+<p style="text-align: justify;">El método trasladar tomará cuatro parámetros: <em>px</em> y <em>py</em>, la ubicación de un punto P en un plano bidimensional; y <em>tx</em> y <em>ty</em>, los valores de traslación en ambos ejes.</p>
+<p><span style="font-family: andale mono, monospace;">def trasladar(self, px, py, tx, ty):</span><br /><span style="font-family: andale mono, monospace;">        p = Matriz(1, 3)</span><br /><span style="font-family: andale mono, monospace;">        p.matriz = [[px, py, 1]]</span><br /><span style="font-family: andale mono, monospace;">        t = Matriz(3, 3)</span><br /><span style="font-family: andale mono, monospace;">        t.matriz = [</span><br /><span style="font-family: andale mono, monospace;">            [1, 0, 0],</span><br /><span style="font-family: andale mono, monospace;">            [0, 1, 0],</span><br /><span style="font-family: andale mono, monospace;">            [tx, ty, 1]</span><br /><span style="font-family: andale mono, monospace;">        ]</span><br /><span style="font-family: andale mono, monospace;">        p_prima = p * t</span><br /><span style="font-family: andale mono, monospace;">        return [p_prima.matriz[0][0], p_prima.matriz[0][1]]</span></p>
+<p style="text-align: justify;">Se declara a P como un objeto matriz de 1x3, y la matriz de traslación T como una matriz de 3x3 predefinida con los valores de <em>tx</em> y <em>ty</em>. Después, simplemente se multiplican ambas matrices, y se devuelve una lista de dos elementos que representan los valores <em>x</em> y <em>y</em> del vector resultante.</p>
+<p>Los métodos rotar y traslación siguen el mismo patrón.</p>
+<p><span style="font-family: andale mono, monospace;">def rotar(self, px, py, angulo, cx=0, cy=0):</span><br /><span style="font-family: andale mono, monospace;">        p = Matriz(1, 3)</span><br /><span style="font-family: andale mono, monospace;">        p.matriz = [[px, py, 1]]</span><br /><span style="font-family: andale mono, monospace;">        c_negativa = Matriz(3, 3)</span><br /><span style="font-family: andale mono, monospace;">        c_negativa.matriz = [</span><br /><span style="font-family: andale mono, monospace;">            [1, 0, 0],</span><br /><span style="font-family: andale mono, monospace;">            [0, 1, 0],</span><br /><span style="font-family: andale mono, monospace;">            [-cx, -cy, 1]</span><br /><span style="font-family: andale mono, monospace;">        ]</span><br /><span style="font-family: andale mono, monospace;">        grados = math.radians(angulo)</span><br /><span style="font-family: andale mono, monospace;">        r = Matriz(3, 3)</span><br /><span style="font-family: andale mono, monospace;">        r.matriz = [</span><br /><span style="font-family: andale mono, monospace;">            [math.cos(grados), math.sin(grados), 0],</span><br /><span style="font-family: andale mono, monospace;">            [-math.sin(grados), math.cos(grados), 0],</span><br /><span style="font-family: andale mono, monospace;">            [0, 0, 1]</span><br /><span style="font-family: andale mono, monospace;">        ]</span><br /><span style="font-family: andale mono, monospace;">        c_positiva = Matriz(3, 3)</span><br /><span style="font-family: andale mono, monospace;">        c_positiva.matriz = [</span><br /><span style="font-family: andale mono, monospace;">            [1, 0, 0],</span><br /><span style="font-family: andale mono, monospace;">            [0, 1, 0],</span><br /><span style="font-family: andale mono, monospace;">            [cx, cy, 1]</span><br /><span style="font-family: andale mono, monospace;">        ]</span><br /><span style="font-family: andale mono, monospace;">        p_prima = p * c_negativa * r * c_positiva</span><br /><span style="font-family: andale mono, monospace;">        return [p_prima.matriz[0][0], p_prima.matriz[0][1]]</span></p>
+<p><span style="font-family: andale mono, monospace;">def escalar(self, px, py, sx, sy, cx=0, cy=0):</span><br /><span style="font-family: andale mono, monospace;">        p = Matriz(1, 3)</span><br /><span style="font-family: andale mono, monospace;">        p.matriz = [[px, py, 1]]</span><br /><span style="font-family: andale mono, monospace;">        c_negativa = Matriz(3, 3)</span><br /><span style="font-family: andale mono, monospace;">        c_negativa.matriz = [</span><br /><span style="font-family: andale mono, monospace;">            [1, 0, 0],</span><br /><span style="font-family: andale mono, monospace;">            [0, 1, 0],</span><br /><span style="font-family: andale mono, monospace;">            [-cx, -cy, 1]</span><br /><span style="font-family: andale mono, monospace;">        ]</span><br /><span style="font-family: andale mono, monospace;">        s = Matriz(3, 3)</span><br /><span style="font-family: andale mono, monospace;">        s.matriz = [</span><br /><span style="font-family: andale mono, monospace;">            [sx, 0, 0],</span><br /><span style="font-family: andale mono, monospace;">            [0, sy, 0],</span><br /><span style="font-family: andale mono, monospace;">            [0, 0, 1]</span><br /><span style="font-family: andale mono, monospace;">        ]</span><br /><span style="font-family: andale mono, monospace;">        c_positiva = Matriz(3, 3)</span><br /><span style="font-family: andale mono, monospace;">        c_positiva.matriz = [</span><br /><span style="font-family: andale mono, monospace;">            [1, 0, 0],</span><br /><span style="font-family: andale mono, monospace;">            [0, 1, 0],</span><br /><span style="font-family: andale mono, monospace;">            [cx, cy, 1]</span><br /><span style="font-family: andale mono, monospace;">        ]</span><br /><span style="font-family: andale mono, monospace;">        p_prima = p * c_negativa * s * c_positiva</span><br /><span style="font-family: andale mono, monospace;">        return [p_prima.matriz[0][0], p_prima.matriz[0][1]]</span></p>
+<p style="text-align: justify;"><span style="font-family: andale mono, monospace;">rotar</span> necesita, además de las coordenadas del punto, un ángulo y las coordenadas de un punto C para tomar como centro de rotación. El ángulo necesita ser convertido a radianes para poder usarlo con las funciones de seno y coseno. Similarmente, <span style="font-family: andale mono, monospace;">escalar</span> toma las coordenadas para P y C, junto con los valores <em>sx</em> y <em>sy</em> como los valores escalares en ambos ejes. Se declaran dos matrices adicionales para la transformación con respecto a C, que se multiplican con la matriz de transformación y P.</p>
+<p style="text-align: justify;">Con estas clases, ya se pueden llevar a cabo transformaciones y obtener sus resultados de manera automática. Se invita a que el lector realice diferentes pruebas.</p></div>
+</div>
+</div>
+</div>
+</div>
+</article>
+<div id="packageLicense" class="cc cc-by-sa">
+<p><span>Obra publicada con</span> <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Licencia Creative Commons Reconocimiento Compartir igual 4.0</a></p>
+</div>
+</section>
+</div>
+<div id='bottomPagination'>
+<nav class="pagination noprt">
+<a href="configuracin.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="vista_y_controlador.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+</div>
+<script type="text/javascript" src="_cedec_js.js"></script></body></html>

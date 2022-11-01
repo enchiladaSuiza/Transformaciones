@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="es">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>Rotación | Graficación en Python: Conceptos y Transformaciones </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta name="author" content="Santiago Vergara" />
+<link rel="license" type="text/html" href="http://creativecommons.org/licenses/by-sa/4.0/" />
+<meta name="generator" content="eXeLearning 2.7 - exelearning.net" />
+<!--[if lt IE 9]><script type="text/javascript" src="exe_html5.js"></script><![endif]-->
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+	</head>
+<body class="exe-web-site" id="exe-node-12"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<header id="header"  style="background-image: url(geometry4.png); background-repeat: repeat-x;"><div id="headerContent">Graficación en Python: Conceptos y Transformaciones</div></header>
+<nav id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">Graficación</a></li>
+   <li><a href="objetivo.html" class="no-ch">Objetivo</a></li>
+   <li><a href="introduccin.html" class="no-ch">Introducción</a></li>
+   <li><a href="desarrollo.html" class="daddy">Desarrollo</a>
+   <ul class="other-section">
+      <li><a href="transformaciones.html" class="no-ch">Transformaciones</a></li>
+      <li><a href="representacin.html" class="no-ch">Representación</a></li>
+      <li><a href="traslacin.html" class="no-ch">Traslación</a></li>
+      <li><a href="rotacin.html" class="no-ch">Rotación</a></li>
+      <li><a href="escalamiento.html" class="no-ch">Escalamiento</a></li>
+      <li><a href="otras_transformaciones.html" class="no-ch">Otras transformaciones</a></li>
+   </ul>
+   </li>
+   <li class="current-page-parent"><a href="ejemplos.html" class="current-page-parent daddy">Ejemplos</a>
+   <ul>
+      <li><a href="traslacin0.html" class="no-ch">Traslación</a></li>
+      <li id="active"><a href="rotacin0.html" class="active no-ch">Rotación</a></li>
+      <li><a href="escalamiento0.html" class="no-ch">Escalamiento</a></li>
+   </ul>
+   </li>
+   <li><a href="ejercicios.html" class="daddy">Ejercicios</a>
+   <ul class="other-section">
+      <li><a href="traslacin1.html" class="no-ch">Traslación</a></li>
+      <li><a href="rotacin1.html" class="no-ch">Rotación</a></li>
+      <li><a href="escalamiento1.html" class="no-ch">Escalamiento</a></li>
+   </ul>
+   </li>
+   <li><a href="programacin_en_python.html" class="daddy">Programación en Python</a>
+   <ul class="other-section">
+      <li><a href="configuracin.html" class="no-ch">Configuración</a></li>
+      <li><a href="modelo.html" class="no-ch">Modelo</a></li>
+      <li><a href="vista_y_controlador.html" class="no-ch">Vista y Controlador</a></li>
+      <li><a href="uso_del_programa.html" class="no-ch">Uso del programa</a></li>
+   </ul>
+   </li>
+   <li><a href="evaluacin.html" class="no-ch">Evaluación</a></li>
+   <li><a href="glosario.html" class="no-ch">Glosario</a></li>
+   <li><a href="referencias.html" class="no-ch">Referencias</a></li>
+   <li><a href="crditos.html" class="no-ch">Créditos</a></li>
+</ul>
+</nav>
+<div id='topPagination'>
+<nav class="pagination noprt">
+<a href="traslacin0.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="escalamiento0.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+<div id="main-wrapper">
+<section id="main">
+<header id="nodeDecoration"><h1 id="nodeTitle">Rotación</h1></header>
+<article class="iDevice_wrapper textIdevice em_iDevice em_iDevice_present" id="id23">
+<div class="iDevice emphasis1" >
+<header class="iDevice_header" style="background-image:url(icon_present.png)"><h1 class="iDeviceTitle">Ejemplo de rotación respecto al origen</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta23_117_2" class="block iDevice_content">
+<div class="exe-text"><p>Queremos rotar un punto <span style="font-family: book antiqua, palatino, serif;">P = (3, -1)</span> en un ángulo de <span style="font-family: book antiqua, palatino, serif;">45°</span> respecto al origen en <span style="font-family: book antiqua, palatino, serif;">(0, 0)</span>. ¿Donde terminará el punto?</p>
+<h2><img src="RotacionOrigenEjemplo.drawio.svg" alt="Diagrama del ejemplo de rotación respecto al origen" title="Rotación Origen Ejemplo" style="display: block; margin-left: auto; margin-right: auto;" width="411" height="158" />Datos</h2>
+<div class="exe-math code-only exe-math-engine position-center">
+<p class="exe-math-code">\begin{equation} \begin{gathered} P = (3, -1) \\ \theta = 45^\circ \\ P' = (?, ?) \\ \end{gathered} \end{equation}</p>
+</div>
+<h2>Procedimiento</h2>
+<p>Convertimos las coordenadas en un vector renglón de coordenadas homogéneas, y obtenemos la matriz de rotación según el ángulo dado.</p>
+<div class="exe-math code-only exe-math-engine position-center">
+<p class="exe-math-code">\begin{align} P = \begin{bmatrix} 3 &amp; -1 &amp; 1 \end{bmatrix}, \quad R = \begin{bmatrix} \cos(45) &amp; \sin(45) &amp; 0 \\ -\sin(45) &amp; \cos(45) &amp; 0 \\ 0 &amp; 0 &amp; 1 \end{bmatrix} \end{align}</p>
+</div>
+<p>Llevamos a cabo la multiplicación para obtener el vector de <span style="font-family: book antiqua, palatino, serif;">P'</span>.</p>
+<div class="exe-math code-only exe-math-engine position-center">
+<p class="exe-math-code">\begin{equation} \begin{gathered} P' = PR = \begin{bmatrix} 3 &amp; -1 &amp; 1 \end{bmatrix} \begin{bmatrix} \cos(45) &amp; \sin(45) &amp; 0 \\ -\sin(45) &amp; \cos(45) &amp; 0 \\ 0 &amp; 0 &amp; 1 \end{bmatrix} = \\ \begin{bmatrix} 3\cos(45) + \sin(45) + 0 &amp; 3\sin(45) - \cos(45) + 0 &amp; 0 + 0 + 1 \end{bmatrix} = \begin{bmatrix} 2.83 &amp; 1.41 &amp; 1 \end{bmatrix} \end{gathered} \end{equation}</p>
+</div>
+<h2 style="text-align: left;">Resultado</h2>
+<div class="exe-math code-only exe-math-engine position-center">
+<p class="exe-math-code">\begin{equation} P' = (2.83, 1.41) \end{equation}</p>
+</div>
+<p style="text-align: center;"><img src="RotacionOrigenEjemploSolucion.drawio.svg" alt="Diagrama de la solución del ejemplo de rotación respecto al origen" title="Solución Rotación Origen" width="289" height="275" /></p></div>
+</div>
+</div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper textIdevice em_iDevice em_iDevice_present" id="id24">
+<div class="iDevice emphasis1" >
+<header class="iDevice_header" style="background-image:url(icon_present.png)"><h1 class="iDeviceTitle">Ejemplo de rotación general</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta24_118_2" class="block iDevice_content">
+<div class="exe-text"><p>Ahora, queremos rotar el punto <span style="font-family: book antiqua, palatino, serif;">P = (1, 2)</span> respecto a un punto de origen <span style="font-family: book antiqua, palatino, serif;">C = (-1, 1)</span> en un ángulo de <span style="font-family: book antiqua, palatino, serif;">90°</span>. ¿Cuál será la nueva posición del punto?</p>
+<p style="text-align: center;"><img src="RotacionGeneralEjemplo.drawio.svg" alt="Diagrama del ejemplo de rotación general" title="Ejemplo Rotación General" width="393" height="212" /></p>
+<h2>Datos</h2>
+<div class="exe-math code-only exe-math-engine position-center">
+<p class="exe-math-code">\begin{equation} \begin{gathered} P = (1, 2) \\ C = (-1, 1) \\ \theta = 90^\circ \\ P' = (?, ?) \\ \end{gathered} \end{equation}</p>
+</div>
+<h2>Procedimiento</h2>
+<p>Para este problema requerimos tres matrices de transformación. La primera de ellas involucra regresar el punto <span style="font-family: book antiqua, palatino, serif;">C</span> al origen:</p>
+<div class="exe-math code-only exe-math-engine position-center">
+<p class="exe-math-code">\begin{equation} T(-C) = \begin{bmatrix} 1 &amp; 0 &amp; 0 \\ 0 &amp; 1 &amp; 0 \\ -(-1) &amp; -1 &amp; 1 \end{bmatrix} \end{equation}</p>
+</div>
+<p>La segunda es la rotación en sí, en base al ángulo dado. Para simplificar los valores de esta matriz en este caso particular, podemos aprovechar que tenemos un ángulo de <span style="font-family: book antiqua, palatino, serif;">90°</span> y que <span style="font-family: book antiqua, palatino, serif;">sen(90) = 1</span> y <span style="font-family: book antiqua, palatino, serif;">cos(90) = 0</span>:</p>
+<div class="exe-math code-only exe-math-engine position-center">
+<p class="exe-math-code">\begin{equation} R = \begin{bmatrix} \cos(90) &amp; \sin(90) &amp; 0 \\ -\sin(90) &amp; \cos(90) &amp; 0 \\ 0 &amp; 0 &amp; 1 \end{bmatrix} = \begin{bmatrix} 0 &amp; 1 &amp; 0 \\ -1 &amp; 0 &amp; 0 \\ 0 &amp; 0 &amp; 1 \end{bmatrix} \end{equation}</p>
+</div>
+<p>La tercera matriz es aquella que regresa el punto <span style="font-family: book antiqua, palatino, serif;">C</span> a su posición original:</p>
+<div class="exe-math code-only exe-math-engine position-center">
+<p class="exe-math-code">\begin{equation} T(C) = \begin{bmatrix} 1 &amp; 0 &amp; 0 \\ 0 &amp; 1 &amp; 0 \\ -1 &amp; 1 &amp; 1 \end{bmatrix} \end{equation}</p>
+</div>
+<p>Para obtener el resultado se multiplica el vector renglón <span style="font-family: book antiqua, palatino, serif;">P</span> las matrices <span style="font-family: book antiqua, palatino, serif;">T(-C)</span>, <span style="font-family: book antiqua, palatino, serif;">R</span> y <span style="font-family: book antiqua, palatino, serif;">T(C)</span>. La multiplicación se lleva a cabo de derecha a izquierda, de la siguiente manera:</p>
+<div class="exe-math code-only exe-math-engine position-center">
+<p class="exe-math-code">\begin{equation} \begin{gathered} P' = \begin{bmatrix} 3 &amp; -1 &amp; 1 \end{bmatrix} \begin{bmatrix} 1 &amp; 0 &amp; 0 \\ 0 &amp; 1 &amp; 0 \\ 1 &amp; -1 &amp; 1 \end{bmatrix} \begin{bmatrix} 0 &amp; 1 &amp; 0 \\ -1 &amp; 0 &amp; 0 \\ 0 &amp; 0 &amp; 1 \end{bmatrix} \begin{bmatrix} 1 &amp; 0 &amp; 0 \\ 0 &amp; 1 &amp; 0 \\ -1 &amp; 1 &amp; 1 \end{bmatrix} = \\ \begin{bmatrix} 3 &amp; -1 &amp; 1 \end{bmatrix} \begin{bmatrix} 1 &amp; 0 &amp; 0 \\ 0 &amp; 1 &amp; 0 \\ 1 &amp; -1 &amp; 1 \end{bmatrix} \begin{bmatrix} 0 &amp; 1 &amp; 0 \\ -1 &amp; 0 &amp; 0 \\ -1 &amp; 1 &amp; 1 \end{bmatrix} = \\ \begin{bmatrix} 3 &amp; -1 &amp; 1 \end{bmatrix} \begin{bmatrix} 0 &amp; 1 &amp; 0 \\ -1 &amp; 0 &amp; 0 \\ 0 &amp; 2 &amp; 1 \\ \end{bmatrix} = \begin{bmatrix} -2 &amp; 3 &amp; 1 \end{bmatrix} \end{gathered} \end{equation}</p>
+</div>
+<h2>Resultado</h2>
+<div class="exe-math code-only exe-math-engine position-center">
+<p class="exe-math-code">\begin{equation} P' = (-2, 3) \end{equation}</p>
+</div>
+<p style="text-align: center;"><img src="RotacionGeneralEjemploSolucion.drawio.svg" alt="Diagrama del resultado del ejemplo de rotación general" title="Solución Rotación General" width="297" height="290" /></p></div>
+</div>
+</div>
+</div>
+</div>
+</article>
+<div id="packageLicense" class="cc cc-by-sa">
+<p><span>Obra publicada con</span> <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Licencia Creative Commons Reconocimiento Compartir igual 4.0</a></p>
+</div>
+</section>
+</div>
+<div id='bottomPagination'>
+<nav class="pagination noprt">
+<a href="traslacin0.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="escalamiento0.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+</div>
+<script type="text/javascript" src="_cedec_js.js"></script></body></html>
